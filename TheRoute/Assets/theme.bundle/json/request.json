@@ -1,0 +1,13 @@
+{
+    "Succeed":
+    {
+        "Body": null,
+        "Succeed": true,
+        "Msg": "",
+        "ResultCode": "Succeed"
+    },
+    "Unauthorized":
+    {
+        "Message": "已拒绝为此请求授权。"
+    }
+}

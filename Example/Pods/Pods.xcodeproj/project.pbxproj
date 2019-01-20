@@ -1,0 +1,1082 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		005F35165480DE8F3FB89C18C7692F42 /* TheBaseRouterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A22C0B94E44964CCDE4396B1D68CF8 /* TheBaseRouterFilter.m */; };
+		05BFD42A1F2A5139612B91303F046577 /* MethodInjecting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4977335F4F695631F804BB822E56CF30 /* MethodInjecting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E119186A046FB292462C03C21B222F /* TheIntentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C8E7C66A6F24E64D337D29B29A3F9E /* TheIntentProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08DF2880EEF39A5705832DE69D4A813D /* TheBaseBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3282E050CA3ED69F534A3650BC70BEEE /* TheBaseBinder.m */; };
+		09818B8FB27103C0B34EB961D3D79041 /* TheStoryBoardConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 26512F6F727930B9747827F27973149E /* TheStoryBoardConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0990EBA6682B04AE432FDF6E882D699E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		0C06AD50D7FCBBE0586FFC416F0995FF /* TheRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF8B81556DE1EE044CDE37BA2DDE99C /* TheRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DD3090FFC2BA95EBA664A9FF86A055A /* TheRouteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73905B2A23FDD9A1647A52ECFBAF3AFA /* TheRouteHelper.m */; };
+		101B48F6C67FC9257C2B1FC752FB3FC4 /* TheTimerService.h in Headers */ = {isa = PBXBuildFile; fileRef = 314B463B2B358C77E54F91A1E938167F /* TheTimerService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10305CDC3F43A24154DDEC62F37A288C /* TheIntentProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD14781CEF0765204EC5510A28A910C /* TheIntentProtocol.m */; };
+		13FCDDAA5F834173F8BA78B78EBFCC15 /* TheEventProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F5B94EF44EF35010151F02D5C07443 /* TheEventProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18B20BB0C869A54F3A5D8DB287EF4D36 /* TheLifeCycleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 88380C2350B8A5B0172F15FE387E0D13 /* TheLifeCycleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A446B6A891D8662E5BEC32DE0BFFD86 /* TheRoute-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F961CAD1FAC1073C449F6A913393DA57 /* TheRoute-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F981AA9EB1A8A615D2507EF3000731F /* TheAliasConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E80AC72F91A5EADCA6BB40E6770EEAE /* TheAliasConfig.m */; };
+		1FF04B990BCC447F045F4E7D54D7FFCC /* TheHttpSchemeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEDA8FFA3855920B02DCEE9C072CC6 /* TheHttpSchemeFilter.m */; };
+		2404D359EC7A230D62AA42B86C1E4253 /* TheRouterFilterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4A774B267E8FBBB8B8F6A0DCD77750 /* TheRouterFilterProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D600D89527615FF6DD685E5BDC5BB40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		349442BB5C016D8638F941A3CE2BECAC /* TheBaseService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA116EF60DA7B88EDCD9F77F30D2E63 /* TheBaseService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		382D2991B48E2C4AB6EAB5B041B9192D /* TheHistoryDirFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A98ACBD9D9E3606074CA462AC807095 /* TheHistoryDirFilter.m */; };
+		3BE28A3C1ED596152A6502310A62ABA8 /* TheBaseBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F6AC7D380A743267B5E029AF402AE38 /* TheBaseBinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C3A52AAD9857D940EF767FFEFA6E40F /* ThePermissionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 62E5E2A79E150660D064D6FE9D7D770A /* ThePermissionConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E752D7E83078EE8255746758C83E86C /* TheRoute.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AEE22D42D365D99F26916E8B110A0D6F /* TheRoute.bundle */; };
+		40A9DEE4F5E01B28CFCBCA7CA5911810 /* IntentCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F55123879615DA89F9BA9E8DB27A13 /* IntentCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		499A1DAE7BE97CF48DDAD1DE0E33A9E0 /* TheBinderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42CE7B008883E653ADFB306E3DB1B6 /* TheBinderProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C1EEA11ADCD9F2B1DD45B79012F21AD /* TheEventProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C803811674272DE1999F305FEB8EF /* TheEventProtocol.m */; };
+		4CBB26A8E4D518526A790E466F025335 /* TheOne2ManyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FC07B011B484C0084B780DCD5BE3DF /* TheOne2ManyConfig.m */; };
+		56ECFC0CDCAFB176804FD55B14B820B1 /* NSString+Route.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F9F871BDDA6A0BFE89534E6ED87A04 /* NSString+Route.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57851B8EC17969D526C5CC95E77507F8 /* TheServiceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 651D97E1B9345093CFD0E820CC71E920 /* TheServiceConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58E05FA51A97C72833760F90A3EBC48A /* TheLifeCycleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 873D274286CE60D9D55EF767F1A26BE4 /* TheLifeCycleProtocol.m */; };
+		59F95C7176C20F267053DABDB425706B /* TheSpecialSchemeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B5C9CDF2329260A684AAC0C7155643 /* TheSpecialSchemeFilter.m */; };
+		5F65FD8323CBED3A01A7B983D0A7CB07 /* TheOne2ManyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCE197A02F6D3C9F7F1F8C284925247 /* TheOne2ManyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62606CA97FF5900CB42E6A8F487F01CF /* TheServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F04999409B56F22F32395DA5C17C4FA /* TheServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636B9F9DE69544EF77CA7004498B7737 /* TheServiceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 051466E256D29686B50645C7AE0DB315 /* TheServiceProtocol.m */; };
+		63A7E3351B7ACD7CBF4CDE6D35D5DCB9 /* TheConfigFileProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BE9F9793571E1EF3F3087E4CF3D7C17B /* TheConfigFileProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		671F574364CB14ECBD384E0B918B638C /* MethodInjecting.m in Sources */ = {isa = PBXBuildFile; fileRef = F72E33158AC9FC3C46413EB49690CEAE /* MethodInjecting.m */; };
+		6C0BA580E431EB40AD4A4DBCE8B2D47E /* TheSupportProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E7DFF569C6ED50832095EF353E8C10 /* TheSupportProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71E3459340D4DDA857CF4D2F107F11BC /* TheXibConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 141097F8C536342C1778446ACF74E455 /* TheXibConfig.m */; };
+		72A238E90F65DAC7506FDD017264B01E /* TheAliasFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8879E4A58201E538FF7C532C84B4D800 /* TheAliasFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74E4D51D9716E2FED82A73F6163868D8 /* TheRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D1C25332E37E802298D76B4E0B1A59 /* TheRouter.m */; };
+		772013BC30CC5F0D808F49FE61AA90B6 /* TheRouteSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BB6594224228BD97EF08832B31936E /* TheRouteSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79D30A8F4F80682F0D46765758D1932A /* TheRouteConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D3F081D9BE9A29C2FC116E0CA52631 /* TheRouteConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A717B2620C0F27A44EEED9B7132A918 /* TheRouteSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AD891F157524ED21144D863C2709B /* TheRouteSupport.m */; };
+		81BE17240D309B5051871FCF73C01BC3 /* TheSpecialSchemeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B549EB01DC255DA9070369F1FCBAD3 /* TheSpecialSchemeConfig.m */; };
+		83510464E03C920B5B2C56BAAA59B294 /* TheOne2ManyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 832AA8EA6CF9836D039AC83F25817F68 /* TheOne2ManyFilter.m */; };
+		8880508473350FF4970C25D6347FBE70 /* TheRoute-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78079B23B47CF1E790374604D387A820 /* TheRoute-dummy.m */; };
+		8A78C5D1C0FA496B1C4B0D4CB8812965 /* TheOpenApplicationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A88ADAEE770AAE36FA12F6C2EC9AC0 /* TheOpenApplicationFilter.m */; };
+		8AF3FF1BB0223A183448CC88E7328DDC /* NSDictionary+Route.h in Headers */ = {isa = PBXBuildFile; fileRef = F0596056F3216F0B32D682BC3C06BB1E /* NSDictionary+Route.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E20DAE9CE18E372EB35CA7096FFE35F /* TheAliasConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1355B8403014229099A715F6C5F7D34E /* TheAliasConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		927345936E4D3EF12F01F9BAC4FA4F65 /* NSDictionary+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F714D24A8EF053E67B5237E75FF3CB9 /* NSDictionary+Route.m */; };
+		928AB0B312F874D224772CBE0E38DEAB /* TheViewControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 64438D3F55D947780169A2E9708F91E4 /* TheViewControllerConfig.m */; };
+		9424B93C664315425216202E002733C3 /* theme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F440169D2110FC8756CCFBE76BE88BE2 /* theme.bundle */; };
+		9BE1C9AA42EBAD300078A39AB5081147 /* Intent.h in Headers */ = {isa = PBXBuildFile; fileRef = 18836C9A8C9B1E6DA3E8CBA59BC99B02 /* Intent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C82B2D0D616B9F725886BFFBB7A14A0 /* TheAliasFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0DE3DA97D3660E61756A7C0671D90E /* TheAliasFilter.m */; };
+		9FD68D0D75ED5FBC28D2C5F46AB58CBB /* Pods-TheRouteDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91F77217CA5B537D0084EEA62AABD03A /* Pods-TheRouteDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A067D9AEB6336078954CBED0AAD29621 /* TheLoginPermissionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AAE2BED47AA6FC78645A15B93BB06E /* TheLoginPermissionFilter.m */; };
+		A479ECAD21646BBAFD8E97F92F114E3C /* Intent.m in Sources */ = {isa = PBXBuildFile; fileRef = 763AEBD5C8A78B2DE8BB08D3E2548E59 /* Intent.m */; };
+		A72509615FCF1A4F32445515D43582A2 /* TheRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = E92567027D9BA32EDCBBE83CC8476EE3 /* TheRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A869FEE7A9AA19DB4F6E47B76BF5D7E5 /* Pods-TheRouteDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3727096477B8E25D740E71ACC469AE9E /* Pods-TheRouteDemo-dummy.m */; };
+		B4C6BF2AD63D60B337078143A8ED892C /* TheOpenApplicationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DE73DAF2AE3F8E8E8A5D77EDC0D309 /* TheOpenApplicationFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6EFA1AD1353CE562AD6684334FB3D2E /* TheLoginPermissionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC27283617779C573B9BB2ECA2D7094 /* TheLoginPermissionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8AD264DC1B58EFE56563F7C6CD44AE2 /* TheStoryBoardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C303C3D82DB7EE93A24C3DA7A3BE8B5 /* TheStoryBoardConfig.m */; };
+		BB8117154F5A5F7877907437EA3714AF /* TheViewControlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD95B528E7E9D72A8654E24D1E144E6 /* TheViewControlProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC9D01AA9011CA24E32E22FC12059A34 /* NSString+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5313A276C08526AC475799AC6E3DCA /* NSString+Route.m */; };
+		BEC367DD0F2800834C116ADB282DE757 /* TheXibConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B28EBD4423160EB792F0C2A6DE5C788 /* TheXibConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1C2CCDB5813E037A63AAE8F46E61DB2 /* TheBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 431D2E4E0D4EEAD1ABD9366D63B13C58 /* TheBaseService.m */; };
+		C4044653617A858C648A38545DE01BDF /* TheHttpSchemeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9ACC68287973119ED09AEF9F7BCEF1 /* TheHttpSchemeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BC3226C556C01E7D4C91F337469146 /* TheRouteCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4948D593C5F626E24551EE3E1B3D3185 /* TheRouteCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C938E9E27392C89E13F0A96B95D7BFAF /* TheSpecialSchemeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = DF358448941D4CCAA90D98F9951A58C7 /* TheSpecialSchemeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD9F22BA90D8FC503E471414D73C0C10 /* TheRouteCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC414A4005F65E56D30C176BB7DB5D /* TheRouteCore.m */; };
+		D1F428976752CB585BC84EE9C04150C4 /* TheViewControllerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A447FADC77D8124468AD10F4A32C96F /* TheViewControllerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6C9853FC48940D7E8ED737DD768189E /* TheBaseRouterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6A1ACDE5681A7DF7F98AD4625ED5AE /* TheBaseRouterFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9E310C4E06F38D7EAFFADC95C43F397 /* TheTimerService.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA7B4150C5801FB2870F858659788C3 /* TheTimerService.m */; };
+		E1DBFA49DE38E21C5E7DD58B3FADDEC2 /* TheHistoryDirFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 482A3D33CC0EAD0376DBC2C71B6D6CC2 /* TheHistoryDirFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E21F052EFE8FD3E4DB1F70CF12088309 /* TheServerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E228B62AC2150395A3D667B20E9FBD /* TheServerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E44570AA040396CFA38739902C5F45D2 /* TheServiceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE88964507E09116F285C11FDCB6D78 /* TheServiceConfig.m */; };
+		EE62CEFE4921F53051253AEED58351D8 /* TheSpecialSchemeConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E969852FB0355F115D58B1E8F1DE2D /* TheSpecialSchemeConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7076BF9331C0B4AC1A42ACDD373DE4A /* ThePermissionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A11F75096E9C7F0C66E6D608A8C81 /* ThePermissionConfig.m */; };
+		F795B4CC3A3E8D587C7E65A4C3CA99A6 /* TheRouteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EAFCE306613F3062BCCFFA645475E7C /* TheRouteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE2D6F6481ACE911AB2B0919044C4328 /* TheOne2ManyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B23C17904FCCA97F502478D92FD091E1 /* TheOne2ManyConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CE20E2EA975BAF4A0F2DF0001E52FAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A2260F37D04D0AC03475CF6A9A46B5;
+			remoteInfo = TheRoute;
+		};
+		FE1711B8D41A075ABB8EC232C59EC2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA41828D7E66AAA274F5DCD172F77D7;
+			remoteInfo = "TheRoute-TheRoute";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		030AD891F157524ED21144D863C2709B /* TheRouteSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheRouteSupport.m; sourceTree = "<group>"; };
+		03E228B62AC2150395A3D667B20E9FBD /* TheServerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheServerProtocol.h; sourceTree = "<group>"; };
+		051466E256D29686B50645C7AE0DB315 /* TheServiceProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheServiceProtocol.m; sourceTree = "<group>"; };
+		08BB6594224228BD97EF08832B31936E /* TheRouteSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouteSupport.h; sourceTree = "<group>"; };
+		08DE73DAF2AE3F8E8E8A5D77EDC0D309 /* TheOpenApplicationFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheOpenApplicationFilter.h; sourceTree = "<group>"; };
+		0B28EBD4423160EB792F0C2A6DE5C788 /* TheXibConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheXibConfig.h; sourceTree = "<group>"; };
+		0C303C3D82DB7EE93A24C3DA7A3BE8B5 /* TheStoryBoardConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheStoryBoardConfig.m; sourceTree = "<group>"; };
+		0E80AC72F91A5EADCA6BB40E6770EEAE /* TheAliasConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheAliasConfig.m; sourceTree = "<group>"; };
+		0F0B7B9AEA312BB5531FD7CDF4F72CF2 /* TheRoute-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TheRoute-prefix.pch"; sourceTree = "<group>"; };
+		12EB5E71FFC7DE7568283242F7B145F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1355B8403014229099A715F6C5F7D34E /* TheAliasConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheAliasConfig.h; sourceTree = "<group>"; };
+		141097F8C536342C1778446ACF74E455 /* TheXibConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheXibConfig.m; sourceTree = "<group>"; };
+		17A22C0B94E44964CCDE4396B1D68CF8 /* TheBaseRouterFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheBaseRouterFilter.m; sourceTree = "<group>"; };
+		18836C9A8C9B1E6DA3E8CBA59BC99B02 /* Intent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Intent.h; sourceTree = "<group>"; };
+		26512F6F727930B9747827F27973149E /* TheStoryBoardConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheStoryBoardConfig.h; sourceTree = "<group>"; };
+		27FC414A4005F65E56D30C176BB7DB5D /* TheRouteCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheRouteCore.m; sourceTree = "<group>"; };
+		28D1FFF11AF4B11AF5A962BCD3D70293 /* TheRoute.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TheRoute.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2A0DE3DA97D3660E61756A7C0671D90E /* TheAliasFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheAliasFilter.m; sourceTree = "<group>"; };
+		2C5313A276C08526AC475799AC6E3DCA /* NSString+Route.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Route.m"; sourceTree = "<group>"; };
+		314B463B2B358C77E54F91A1E938167F /* TheTimerService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheTimerService.h; sourceTree = "<group>"; };
+		31D1C25332E37E802298D76B4E0B1A59 /* TheRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheRouter.m; sourceTree = "<group>"; };
+		3282E050CA3ED69F534A3650BC70BEEE /* TheBaseBinder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheBaseBinder.m; sourceTree = "<group>"; };
+		33A8199ED1794DBDAE04B728E129D4E1 /* Pods-TheRouteDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheRouteDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3727096477B8E25D740E71ACC469AE9E /* Pods-TheRouteDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheRouteDemo-dummy.m"; sourceTree = "<group>"; };
+		3A4A774B267E8FBBB8B8F6A0DCD77750 /* TheRouterFilterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouterFilterProtocol.h; sourceTree = "<group>"; };
+		3AD14781CEF0765204EC5510A28A910C /* TheIntentProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheIntentProtocol.m; sourceTree = "<group>"; };
+		3B821FD3091BE9132F72CFF90778FE91 /* Pods-TheRouteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheRouteDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3CF8B81556DE1EE044CDE37BA2DDE99C /* TheRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheRoute.h; path = TheRoute/Classes/TheRoute.h; sourceTree = "<group>"; };
+		3EAFCE306613F3062BCCFFA645475E7C /* TheRouteHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouteHelper.h; sourceTree = "<group>"; };
+		40CA0D7F369935F04890B3836DF12B07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		431D2E4E0D4EEAD1ABD9366D63B13C58 /* TheBaseService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheBaseService.m; sourceTree = "<group>"; };
+		44BDAEBBABD56786B181F0ED41DCDA8F /* ResourceBundle-TheRoute-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TheRoute-Info.plist"; sourceTree = "<group>"; };
+		46AAE2BED47AA6FC78645A15B93BB06E /* TheLoginPermissionFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheLoginPermissionFilter.m; sourceTree = "<group>"; };
+		482A3D33CC0EAD0376DBC2C71B6D6CC2 /* TheHistoryDirFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheHistoryDirFilter.h; sourceTree = "<group>"; };
+		4948D593C5F626E24551EE3E1B3D3185 /* TheRouteCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouteCore.h; sourceTree = "<group>"; };
+		4977335F4F695631F804BB822E56CF30 /* MethodInjecting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MethodInjecting.h; sourceTree = "<group>"; };
+		4BCE197A02F6D3C9F7F1F8C284925247 /* TheOne2ManyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheOne2ManyFilter.h; sourceTree = "<group>"; };
+		518F1FB8A0D68DD3A1DEAD1276E3DE29 /* Pods-TheRouteDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheRouteDemo-frameworks.sh"; sourceTree = "<group>"; };
+		5640E4E2D5230E9EA464598765716812 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheRoute.xcconfig; sourceTree = "<group>"; };
+		58F5B94EF44EF35010151F02D5C07443 /* TheEventProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheEventProtocol.h; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A98ACBD9D9E3606074CA462AC807095 /* TheHistoryDirFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheHistoryDirFilter.m; sourceTree = "<group>"; };
+		5CAEDA8FFA3855920B02DCEE9C072CC6 /* TheHttpSchemeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheHttpSchemeFilter.m; sourceTree = "<group>"; };
+		5E4A11F75096E9C7F0C66E6D608A8C81 /* ThePermissionConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ThePermissionConfig.m; sourceTree = "<group>"; };
+		62E5E2A79E150660D064D6FE9D7D770A /* ThePermissionConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ThePermissionConfig.h; sourceTree = "<group>"; };
+		64438D3F55D947780169A2E9708F91E4 /* TheViewControllerConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheViewControllerConfig.m; sourceTree = "<group>"; };
+		651D97E1B9345093CFD0E820CC71E920 /* TheServiceConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheServiceConfig.h; sourceTree = "<group>"; };
+		68D3F081D9BE9A29C2FC116E0CA52631 /* TheRouteConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouteConst.h; sourceTree = "<group>"; };
+		69B5C9CDF2329260A684AAC0C7155643 /* TheSpecialSchemeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheSpecialSchemeFilter.m; sourceTree = "<group>"; };
+		6A447FADC77D8124468AD10F4A32C96F /* TheViewControllerConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheViewControllerConfig.h; sourceTree = "<group>"; };
+		6A6A1ACDE5681A7DF7F98AD4625ED5AE /* TheBaseRouterFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheBaseRouterFilter.h; sourceTree = "<group>"; };
+		6B59CCD695BAD0C30D4B179AB43FF9CB /* Pods_TheRouteDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TheRouteDemo.framework; path = "Pods-TheRouteDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F04999409B56F22F32395DA5C17C4FA /* TheServiceProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheServiceProtocol.h; sourceTree = "<group>"; };
+		6F6AC7D380A743267B5E029AF402AE38 /* TheBaseBinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheBaseBinder.h; sourceTree = "<group>"; };
+		72E7DFF569C6ED50832095EF353E8C10 /* TheSupportProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheSupportProtocol.h; sourceTree = "<group>"; };
+		73905B2A23FDD9A1647A52ECFBAF3AFA /* TheRouteHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheRouteHelper.m; sourceTree = "<group>"; };
+		74E0A359D5D54E680580E312D2BEF1EE /* TheRoute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TheRoute.framework; path = TheRoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760960D1BA1B98E5960FC0A89072FE6D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763AEBD5C8A78B2DE8BB08D3E2548E59 /* Intent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Intent.m; sourceTree = "<group>"; };
+		78079B23B47CF1E790374604D387A820 /* TheRoute-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheRoute-dummy.m"; sourceTree = "<group>"; };
+		81C8E7C66A6F24E64D337D29B29A3F9E /* TheIntentProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheIntentProtocol.h; sourceTree = "<group>"; };
+		81FC07B011B484C0084B780DCD5BE3DF /* TheOne2ManyConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheOne2ManyConfig.m; sourceTree = "<group>"; };
+		832AA8EA6CF9836D039AC83F25817F68 /* TheOne2ManyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheOne2ManyFilter.m; sourceTree = "<group>"; };
+		873D274286CE60D9D55EF767F1A26BE4 /* TheLifeCycleProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheLifeCycleProtocol.m; sourceTree = "<group>"; };
+		87F9400812C0E28A59CE41F12BFAF741 /* Pods-TheRouteDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheRouteDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		88380C2350B8A5B0172F15FE387E0D13 /* TheLifeCycleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheLifeCycleProtocol.h; sourceTree = "<group>"; };
+		8879E4A58201E538FF7C532C84B4D800 /* TheAliasFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheAliasFilter.h; sourceTree = "<group>"; };
+		8B42CE7B008883E653ADFB306E3DB1B6 /* TheBinderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheBinderProtocol.h; sourceTree = "<group>"; };
+		8EB018E0972C35D5750C198C39F44081 /* TheRoute.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TheRoute.modulemap; sourceTree = "<group>"; };
+		8FE88964507E09116F285C11FDCB6D78 /* TheServiceConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheServiceConfig.m; sourceTree = "<group>"; };
+		91F77217CA5B537D0084EEA62AABD03A /* Pods-TheRouteDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheRouteDemo-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96E969852FB0355F115D58B1E8F1DE2D /* TheSpecialSchemeConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheSpecialSchemeConfig.h; sourceTree = "<group>"; };
+		9F4C803811674272DE1999F305FEB8EF /* TheEventProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheEventProtocol.m; sourceTree = "<group>"; };
+		9F714D24A8EF053E67B5237E75FF3CB9 /* NSDictionary+Route.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Route.m"; sourceTree = "<group>"; };
+		9FA116EF60DA7B88EDCD9F77F30D2E63 /* TheBaseService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheBaseService.h; sourceTree = "<group>"; };
+		9FD95B528E7E9D72A8654E24D1E144E6 /* TheViewControlProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheViewControlProtocol.h; sourceTree = "<group>"; };
+		A8F55123879615DA89F9BA9E8DB27A13 /* IntentCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IntentCategory.h; sourceTree = "<group>"; };
+		AB9ACC68287973119ED09AEF9F7BCEF1 /* TheHttpSchemeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheHttpSchemeFilter.h; sourceTree = "<group>"; };
+		AEE22D42D365D99F26916E8B110A0D6F /* TheRoute.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TheRoute.bundle; path = "TheRoute-TheRoute.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23C17904FCCA97F502478D92FD091E1 /* TheOne2ManyConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheOne2ManyConfig.h; sourceTree = "<group>"; };
+		B3BE2EBA440BF421986279069403064A /* Pods-TheRouteDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TheRouteDemo.modulemap"; sourceTree = "<group>"; };
+		B3F9F871BDDA6A0BFE89534E6ED87A04 /* NSString+Route.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Route.h"; sourceTree = "<group>"; };
+		BE9F9793571E1EF3F3087E4CF3D7C17B /* TheConfigFileProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheConfigFileProtocol.h; sourceTree = "<group>"; };
+		C32CD3E9FF9C245B50B25F954FBBB4C4 /* Pods-TheRouteDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheRouteDemo-resources.sh"; sourceTree = "<group>"; };
+		DACE34080AFC80A6FFE0E5E2CD3F76D7 /* Pods-TheRouteDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheRouteDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DEA7B4150C5801FB2870F858659788C3 /* TheTimerService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheTimerService.m; sourceTree = "<group>"; };
+		DF358448941D4CCAA90D98F9951A58C7 /* TheSpecialSchemeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheSpecialSchemeFilter.h; sourceTree = "<group>"; };
+		E6B549EB01DC255DA9070369F1FCBAD3 /* TheSpecialSchemeConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheSpecialSchemeConfig.m; sourceTree = "<group>"; };
+		E92567027D9BA32EDCBBE83CC8476EE3 /* TheRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheRouter.h; sourceTree = "<group>"; };
+		ECC27283617779C573B9BB2ECA2D7094 /* TheLoginPermissionFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheLoginPermissionFilter.h; sourceTree = "<group>"; };
+		F0596056F3216F0B32D682BC3C06BB1E /* NSDictionary+Route.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Route.h"; sourceTree = "<group>"; };
+		F0A88ADAEE770AAE36FA12F6C2EC9AC0 /* TheOpenApplicationFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheOpenApplicationFilter.m; sourceTree = "<group>"; };
+		F440169D2110FC8756CCFBE76BE88BE2 /* theme.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = theme.bundle; path = TheRoute/Assets/theme.bundle; sourceTree = "<group>"; };
+		F72E33158AC9FC3C46413EB49690CEAE /* MethodInjecting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MethodInjecting.m; sourceTree = "<group>"; };
+		F961CAD1FAC1073C449F6A913393DA57 /* TheRoute-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TheRoute-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046F491778DA1961BD409B7F15B885E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D600D89527615FF6DD685E5BDC5BB40 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F91DF5976B4D8CCA09E43B489979497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAB65FC874E92BFFFFE6F8B6C9B58BB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0990EBA6682B04AE432FDF6E882D699E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0142857465974B8CFEFE5F7A62370396 /* MethodInjecting */ = {
+			isa = PBXGroup;
+			children = (
+				4977335F4F695631F804BB822E56CF30 /* MethodInjecting.h */,
+				F72E33158AC9FC3C46413EB49690CEAE /* MethodInjecting.m */,
+			);
+			name = MethodInjecting;
+			path = MethodInjecting;
+			sourceTree = "<group>";
+		};
+		06EEBDD7A42460162A27218D341FC5EB /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				942B5402D8B2245E145101F7541C9024 /* ConfigFile */,
+				9D327CD4A0504DE69F9F531BE72D56E4 /* RouterFilter */,
+				0A7C318CBAE1A62EF2CF5C7E3A126D31 /* Service */,
+			);
+			name = Plugin;
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		0A7C318CBAE1A62EF2CF5C7E3A126D31 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6F6AC7D380A743267B5E029AF402AE38 /* TheBaseBinder.h */,
+				3282E050CA3ED69F534A3650BC70BEEE /* TheBaseBinder.m */,
+				9FA116EF60DA7B88EDCD9F77F30D2E63 /* TheBaseService.h */,
+				431D2E4E0D4EEAD1ABD9366D63B13C58 /* TheBaseService.m */,
+				8B42CE7B008883E653ADFB306E3DB1B6 /* TheBinderProtocol.h */,
+				03E228B62AC2150395A3D667B20E9FBD /* TheServerProtocol.h */,
+				314B463B2B358C77E54F91A1E938167F /* TheTimerService.h */,
+				DEA7B4150C5801FB2870F858659788C3 /* TheTimerService.m */,
+			);
+			name = Service;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0B83ED25824AC199C804BD8C40B4FEAA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F0596056F3216F0B32D682BC3C06BB1E /* NSDictionary+Route.h */,
+				9F714D24A8EF053E67B5237E75FF3CB9 /* NSDictionary+Route.m */,
+				B3F9F871BDDA6A0BFE89534E6ED87A04 /* NSString+Route.h */,
+				2C5313A276C08526AC475799AC6E3DCA /* NSString+Route.m */,
+				68D3F081D9BE9A29C2FC116E0CA52631 /* TheRouteConst.h */,
+				3EAFCE306613F3062BCCFFA645475E7C /* TheRouteHelper.h */,
+				73905B2A23FDD9A1647A52ECFBAF3AFA /* TheRouteHelper.m */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		4886ACD2BEF598987178E29B2183FC43 /* CustomFilter */ = {
+			isa = PBXGroup;
+			children = (
+				4BCE197A02F6D3C9F7F1F8C284925247 /* TheOne2ManyFilter.h */,
+				832AA8EA6CF9836D039AC83F25817F68 /* TheOne2ManyFilter.m */,
+			);
+			name = CustomFilter;
+			path = CustomFilter;
+			sourceTree = "<group>";
+		};
+		57EC00C7DCB2F84CD9DD23B5477E69FE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4948D593C5F626E24551EE3E1B3D3185 /* TheRouteCore.h */,
+				27FC414A4005F65E56D30C176BB7DB5D /* TheRouteCore.m */,
+				E92567027D9BA32EDCBBE83CC8476EE3 /* TheRouter.h */,
+				31D1C25332E37E802298D76B4E0B1A59 /* TheRouter.m */,
+				08BB6594224228BD97EF08832B31936E /* TheRouteSupport.h */,
+				030AD891F157524ED21144D863C2709B /* TheRouteSupport.m */,
+				72E7DFF569C6ED50832095EF353E8C10 /* TheSupportProtocol.h */,
+				06EEBDD7A42460162A27218D341FC5EB /* Plugin */,
+				0B83ED25824AC199C804BD8C40B4FEAA /* Util */,
+			);
+			name = Core;
+			path = TheRoute/Classes/Core;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				8CCC84B2CA8D6D2215949A0D06D1DCAB /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				D1C00DDBAF5DE94AE55722EC4A07E757 /* Products */,
+				D9F1144912AB87F6B7CD8DB52A9F56A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E235E3C6146432EB71F8A51BDF499E8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				18836C9A8C9B1E6DA3E8CBA59BC99B02 /* Intent.h */,
+				763AEBD5C8A78B2DE8BB08D3E2548E59 /* Intent.m */,
+				A8F55123879615DA89F9BA9E8DB27A13 /* IntentCategory.h */,
+				58F5B94EF44EF35010151F02D5C07443 /* TheEventProtocol.h */,
+				9F4C803811674272DE1999F305FEB8EF /* TheEventProtocol.m */,
+				81C8E7C66A6F24E64D337D29B29A3F9E /* TheIntentProtocol.h */,
+				3AD14781CEF0765204EC5510A28A910C /* TheIntentProtocol.m */,
+				88380C2350B8A5B0172F15FE387E0D13 /* TheLifeCycleProtocol.h */,
+				873D274286CE60D9D55EF767F1A26BE4 /* TheLifeCycleProtocol.m */,
+				6F04999409B56F22F32395DA5C17C4FA /* TheServiceProtocol.h */,
+				051466E256D29686B50645C7AE0DB315 /* TheServiceProtocol.m */,
+				9FD95B528E7E9D72A8654E24D1E144E6 /* TheViewControlProtocol.h */,
+				0142857465974B8CFEFE5F7A62370396 /* MethodInjecting */,
+			);
+			name = Base;
+			path = TheRoute/Classes/Base;
+			sourceTree = "<group>";
+		};
+		8CCC84B2CA8D6D2215949A0D06D1DCAB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0F2B31E35996B06C1D8A715CF728B22 /* TheRoute */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		93B16719B35060ED99DCFD841596A9FE /* CustomConfig */ = {
+			isa = PBXGroup;
+			children = (
+				B23C17904FCCA97F502478D92FD091E1 /* TheOne2ManyConfig.h */,
+				81FC07B011B484C0084B780DCD5BE3DF /* TheOne2ManyConfig.m */,
+			);
+			name = CustomConfig;
+			path = CustomConfig;
+			sourceTree = "<group>";
+		};
+		942B5402D8B2245E145101F7541C9024 /* ConfigFile */ = {
+			isa = PBXGroup;
+			children = (
+				1355B8403014229099A715F6C5F7D34E /* TheAliasConfig.h */,
+				0E80AC72F91A5EADCA6BB40E6770EEAE /* TheAliasConfig.m */,
+				BE9F9793571E1EF3F3087E4CF3D7C17B /* TheConfigFileProtocol.h */,
+				62E5E2A79E150660D064D6FE9D7D770A /* ThePermissionConfig.h */,
+				5E4A11F75096E9C7F0C66E6D608A8C81 /* ThePermissionConfig.m */,
+				651D97E1B9345093CFD0E820CC71E920 /* TheServiceConfig.h */,
+				8FE88964507E09116F285C11FDCB6D78 /* TheServiceConfig.m */,
+				96E969852FB0355F115D58B1E8F1DE2D /* TheSpecialSchemeConfig.h */,
+				E6B549EB01DC255DA9070369F1FCBAD3 /* TheSpecialSchemeConfig.m */,
+				26512F6F727930B9747827F27973149E /* TheStoryBoardConfig.h */,
+				0C303C3D82DB7EE93A24C3DA7A3BE8B5 /* TheStoryBoardConfig.m */,
+				6A447FADC77D8124468AD10F4A32C96F /* TheViewControllerConfig.h */,
+				64438D3F55D947780169A2E9708F91E4 /* TheViewControllerConfig.m */,
+				0B28EBD4423160EB792F0C2A6DE5C788 /* TheXibConfig.h */,
+				141097F8C536342C1778446ACF74E455 /* TheXibConfig.m */,
+				93B16719B35060ED99DCFD841596A9FE /* CustomConfig */,
+			);
+			name = ConfigFile;
+			path = ConfigFile;
+			sourceTree = "<group>";
+		};
+		9D327CD4A0504DE69F9F531BE72D56E4 /* RouterFilter */ = {
+			isa = PBXGroup;
+			children = (
+				8879E4A58201E538FF7C532C84B4D800 /* TheAliasFilter.h */,
+				2A0DE3DA97D3660E61756A7C0671D90E /* TheAliasFilter.m */,
+				6A6A1ACDE5681A7DF7F98AD4625ED5AE /* TheBaseRouterFilter.h */,
+				17A22C0B94E44964CCDE4396B1D68CF8 /* TheBaseRouterFilter.m */,
+				482A3D33CC0EAD0376DBC2C71B6D6CC2 /* TheHistoryDirFilter.h */,
+				5A98ACBD9D9E3606074CA462AC807095 /* TheHistoryDirFilter.m */,
+				AB9ACC68287973119ED09AEF9F7BCEF1 /* TheHttpSchemeFilter.h */,
+				5CAEDA8FFA3855920B02DCEE9C072CC6 /* TheHttpSchemeFilter.m */,
+				ECC27283617779C573B9BB2ECA2D7094 /* TheLoginPermissionFilter.h */,
+				46AAE2BED47AA6FC78645A15B93BB06E /* TheLoginPermissionFilter.m */,
+				08DE73DAF2AE3F8E8E8A5D77EDC0D309 /* TheOpenApplicationFilter.h */,
+				F0A88ADAEE770AAE36FA12F6C2EC9AC0 /* TheOpenApplicationFilter.m */,
+				3A4A774B267E8FBBB8B8F6A0DCD77750 /* TheRouterFilterProtocol.h */,
+				DF358448941D4CCAA90D98F9951A58C7 /* TheSpecialSchemeFilter.h */,
+				69B5C9CDF2329260A684AAC0C7155643 /* TheSpecialSchemeFilter.m */,
+				4886ACD2BEF598987178E29B2183FC43 /* CustomFilter */,
+			);
+			name = RouterFilter;
+			path = RouterFilter;
+			sourceTree = "<group>";
+		};
+		9FBC28F7EBA831A0A8826E60424D59F4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5640E4E2D5230E9EA464598765716812 /* LICENSE */,
+				40CA0D7F369935F04890B3836DF12B07 /* README.md */,
+				28D1FFF11AF4B11AF5A962BCD3D70293 /* TheRoute.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0F2B31E35996B06C1D8A715CF728B22 /* TheRoute */ = {
+			isa = PBXGroup;
+			children = (
+				3CF8B81556DE1EE044CDE37BA2DDE99C /* TheRoute.h */,
+				7E235E3C6146432EB71F8A51BDF499E8 /* Base */,
+				57EC00C7DCB2F84CD9DD23B5477E69FE /* Core */,
+				9FBC28F7EBA831A0A8826E60424D59F4 /* Pod */,
+				CC4747F1D07A66E964EBEB93911EB4B6 /* Resources */,
+				D884D37B412ACF2FCB02F13EEA922E37 /* Support Files */,
+			);
+			name = TheRoute;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CC4747F1D07A66E964EBEB93911EB4B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F440169D2110FC8756CCFBE76BE88BE2 /* theme.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D1C00DDBAF5DE94AE55722EC4A07E757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B59CCD695BAD0C30D4B179AB43FF9CB /* Pods_TheRouteDemo.framework */,
+				AEE22D42D365D99F26916E8B110A0D6F /* TheRoute.bundle */,
+				74E0A359D5D54E680580E312D2BEF1EE /* TheRoute.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D884D37B412ACF2FCB02F13EEA922E37 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12EB5E71FFC7DE7568283242F7B145F9 /* Info.plist */,
+				44BDAEBBABD56786B181F0ED41DCDA8F /* ResourceBundle-TheRoute-Info.plist */,
+				8EB018E0972C35D5750C198C39F44081 /* TheRoute.modulemap */,
+				575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */,
+				78079B23B47CF1E790374604D387A820 /* TheRoute-dummy.m */,
+				0F0B7B9AEA312BB5531FD7CDF4F72CF2 /* TheRoute-prefix.pch */,
+				F961CAD1FAC1073C449F6A913393DA57 /* TheRoute-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TheRoute";
+			sourceTree = "<group>";
+		};
+		D9F1144912AB87F6B7CD8DB52A9F56A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F49D742F0337A76B52007E4226252944 /* Pods-TheRouteDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F49D742F0337A76B52007E4226252944 /* Pods-TheRouteDemo */ = {
+			isa = PBXGroup;
+			children = (
+				760960D1BA1B98E5960FC0A89072FE6D /* Info.plist */,
+				B3BE2EBA440BF421986279069403064A /* Pods-TheRouteDemo.modulemap */,
+				33A8199ED1794DBDAE04B728E129D4E1 /* Pods-TheRouteDemo-acknowledgements.markdown */,
+				87F9400812C0E28A59CE41F12BFAF741 /* Pods-TheRouteDemo-acknowledgements.plist */,
+				3727096477B8E25D740E71ACC469AE9E /* Pods-TheRouteDemo-dummy.m */,
+				518F1FB8A0D68DD3A1DEAD1276E3DE29 /* Pods-TheRouteDemo-frameworks.sh */,
+				C32CD3E9FF9C245B50B25F954FBBB4C4 /* Pods-TheRouteDemo-resources.sh */,
+				91F77217CA5B537D0084EEA62AABD03A /* Pods-TheRouteDemo-umbrella.h */,
+				3B821FD3091BE9132F72CFF90778FE91 /* Pods-TheRouteDemo.debug.xcconfig */,
+				DACE34080AFC80A6FFE0E5E2CD3F76D7 /* Pods-TheRouteDemo.release.xcconfig */,
+			);
+			name = "Pods-TheRouteDemo";
+			path = "Target Support Files/Pods-TheRouteDemo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		50B9DA4314D9DA53A6499A25DC884AFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD68D0D75ED5FBC28D2C5F46AB58CBB /* Pods-TheRouteDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E6ED3FFD1E337CFC90719E822B31EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE1C9AA42EBAD300078A39AB5081147 /* Intent.h in Headers */,
+				40A9DEE4F5E01B28CFCBCA7CA5911810 /* IntentCategory.h in Headers */,
+				05BFD42A1F2A5139612B91303F046577 /* MethodInjecting.h in Headers */,
+				8AF3FF1BB0223A183448CC88E7328DDC /* NSDictionary+Route.h in Headers */,
+				56ECFC0CDCAFB176804FD55B14B820B1 /* NSString+Route.h in Headers */,
+				8E20DAE9CE18E372EB35CA7096FFE35F /* TheAliasConfig.h in Headers */,
+				72A238E90F65DAC7506FDD017264B01E /* TheAliasFilter.h in Headers */,
+				3BE28A3C1ED596152A6502310A62ABA8 /* TheBaseBinder.h in Headers */,
+				D6C9853FC48940D7E8ED737DD768189E /* TheBaseRouterFilter.h in Headers */,
+				349442BB5C016D8638F941A3CE2BECAC /* TheBaseService.h in Headers */,
+				499A1DAE7BE97CF48DDAD1DE0E33A9E0 /* TheBinderProtocol.h in Headers */,
+				63A7E3351B7ACD7CBF4CDE6D35D5DCB9 /* TheConfigFileProtocol.h in Headers */,
+				13FCDDAA5F834173F8BA78B78EBFCC15 /* TheEventProtocol.h in Headers */,
+				E1DBFA49DE38E21C5E7DD58B3FADDEC2 /* TheHistoryDirFilter.h in Headers */,
+				C4044653617A858C648A38545DE01BDF /* TheHttpSchemeFilter.h in Headers */,
+				07E119186A046FB292462C03C21B222F /* TheIntentProtocol.h in Headers */,
+				18B20BB0C869A54F3A5D8DB287EF4D36 /* TheLifeCycleProtocol.h in Headers */,
+				B6EFA1AD1353CE562AD6684334FB3D2E /* TheLoginPermissionFilter.h in Headers */,
+				FE2D6F6481ACE911AB2B0919044C4328 /* TheOne2ManyConfig.h in Headers */,
+				5F65FD8323CBED3A01A7B983D0A7CB07 /* TheOne2ManyFilter.h in Headers */,
+				B4C6BF2AD63D60B337078143A8ED892C /* TheOpenApplicationFilter.h in Headers */,
+				3C3A52AAD9857D940EF767FFEFA6E40F /* ThePermissionConfig.h in Headers */,
+				1A446B6A891D8662E5BEC32DE0BFFD86 /* TheRoute-umbrella.h in Headers */,
+				0C06AD50D7FCBBE0586FFC416F0995FF /* TheRoute.h in Headers */,
+				79D30A8F4F80682F0D46765758D1932A /* TheRouteConst.h in Headers */,
+				C5BC3226C556C01E7D4C91F337469146 /* TheRouteCore.h in Headers */,
+				F795B4CC3A3E8D587C7E65A4C3CA99A6 /* TheRouteHelper.h in Headers */,
+				A72509615FCF1A4F32445515D43582A2 /* TheRouter.h in Headers */,
+				2404D359EC7A230D62AA42B86C1E4253 /* TheRouterFilterProtocol.h in Headers */,
+				772013BC30CC5F0D808F49FE61AA90B6 /* TheRouteSupport.h in Headers */,
+				E21F052EFE8FD3E4DB1F70CF12088309 /* TheServerProtocol.h in Headers */,
+				57851B8EC17969D526C5CC95E77507F8 /* TheServiceConfig.h in Headers */,
+				62606CA97FF5900CB42E6A8F487F01CF /* TheServiceProtocol.h in Headers */,
+				EE62CEFE4921F53051253AEED58351D8 /* TheSpecialSchemeConfig.h in Headers */,
+				C938E9E27392C89E13F0A96B95D7BFAF /* TheSpecialSchemeFilter.h in Headers */,
+				09818B8FB27103C0B34EB961D3D79041 /* TheStoryBoardConfig.h in Headers */,
+				6C0BA580E431EB40AD4A4DBCE8B2D47E /* TheSupportProtocol.h in Headers */,
+				101B48F6C67FC9257C2B1FC752FB3FC4 /* TheTimerService.h in Headers */,
+				D1F428976752CB585BC84EE9C04150C4 /* TheViewControllerConfig.h in Headers */,
+				BB8117154F5A5F7877907437EA3714AF /* TheViewControlProtocol.h in Headers */,
+				BEC367DD0F2800834C116ADB282DE757 /* TheXibConfig.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DB308CD3805BEA40304C9FA8A0E5375 /* Pods-TheRouteDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 083E7D14EEA6D68860D0B0B69E9CDCFC /* Build configuration list for PBXNativeTarget "Pods-TheRouteDemo" */;
+			buildPhases = (
+				50B9DA4314D9DA53A6499A25DC884AFF /* Headers */,
+				84A8268381993A7D01EA36F1E8F11942 /* Sources */,
+				046F491778DA1961BD409B7F15B885E1 /* Frameworks */,
+				AB28B63E94139884C95CF47942B16FF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3217188D8D703137A703C6088F8FF135 /* PBXTargetDependency */,
+			);
+			name = "Pods-TheRouteDemo";
+			productName = "Pods-TheRouteDemo";
+			productReference = 6B59CCD695BAD0C30D4B179AB43FF9CB /* Pods_TheRouteDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		40A2260F37D04D0AC03475CF6A9A46B5 /* TheRoute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23B6DFEDC49E5DD4FD18F56090CDE3C /* Build configuration list for PBXNativeTarget "TheRoute" */;
+			buildPhases = (
+				65E6ED3FFD1E337CFC90719E822B31EF /* Headers */,
+				22F5992FAAC213D8383A109A2C14055D /* Sources */,
+				AAB65FC874E92BFFFFE6F8B6C9B58BB3 /* Frameworks */,
+				3DE2A4F3A476946C81C4EAC7C03987B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B6BDA97E17AB7FE6029986FC73D7BD9 /* PBXTargetDependency */,
+			);
+			name = TheRoute;
+			productName = TheRoute;
+			productReference = 74E0A359D5D54E680580E312D2BEF1EE /* TheRoute.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8EA41828D7E66AAA274F5DCD172F77D7 /* TheRoute-TheRoute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E30F4ECF0985746B42A3B9D59C58BC6 /* Build configuration list for PBXNativeTarget "TheRoute-TheRoute" */;
+			buildPhases = (
+				94513013895E07F31443AA67EE15B277 /* Sources */,
+				1F91DF5976B4D8CCA09E43B489979497 /* Frameworks */,
+				65BD0C4E98C1BCCC32B1122D666A3D32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TheRoute-TheRoute";
+			productName = "TheRoute-TheRoute";
+			productReference = AEE22D42D365D99F26916E8B110A0D6F /* TheRoute.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D1C00DDBAF5DE94AE55722EC4A07E757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DB308CD3805BEA40304C9FA8A0E5375 /* Pods-TheRouteDemo */,
+				40A2260F37D04D0AC03475CF6A9A46B5 /* TheRoute */,
+				8EA41828D7E66AAA274F5DCD172F77D7 /* TheRoute-TheRoute */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE2A4F3A476946C81C4EAC7C03987B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E752D7E83078EE8255746758C83E86C /* TheRoute.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65BD0C4E98C1BCCC32B1122D666A3D32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9424B93C664315425216202E002733C3 /* theme.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB28B63E94139884C95CF47942B16FF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F5992FAAC213D8383A109A2C14055D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A479ECAD21646BBAFD8E97F92F114E3C /* Intent.m in Sources */,
+				671F574364CB14ECBD384E0B918B638C /* MethodInjecting.m in Sources */,
+				927345936E4D3EF12F01F9BAC4FA4F65 /* NSDictionary+Route.m in Sources */,
+				BC9D01AA9011CA24E32E22FC12059A34 /* NSString+Route.m in Sources */,
+				1F981AA9EB1A8A615D2507EF3000731F /* TheAliasConfig.m in Sources */,
+				9C82B2D0D616B9F725886BFFBB7A14A0 /* TheAliasFilter.m in Sources */,
+				08DF2880EEF39A5705832DE69D4A813D /* TheBaseBinder.m in Sources */,
+				005F35165480DE8F3FB89C18C7692F42 /* TheBaseRouterFilter.m in Sources */,
+				C1C2CCDB5813E037A63AAE8F46E61DB2 /* TheBaseService.m in Sources */,
+				4C1EEA11ADCD9F2B1DD45B79012F21AD /* TheEventProtocol.m in Sources */,
+				382D2991B48E2C4AB6EAB5B041B9192D /* TheHistoryDirFilter.m in Sources */,
+				1FF04B990BCC447F045F4E7D54D7FFCC /* TheHttpSchemeFilter.m in Sources */,
+				10305CDC3F43A24154DDEC62F37A288C /* TheIntentProtocol.m in Sources */,
+				58E05FA51A97C72833760F90A3EBC48A /* TheLifeCycleProtocol.m in Sources */,
+				A067D9AEB6336078954CBED0AAD29621 /* TheLoginPermissionFilter.m in Sources */,
+				4CBB26A8E4D518526A790E466F025335 /* TheOne2ManyConfig.m in Sources */,
+				83510464E03C920B5B2C56BAAA59B294 /* TheOne2ManyFilter.m in Sources */,
+				8A78C5D1C0FA496B1C4B0D4CB8812965 /* TheOpenApplicationFilter.m in Sources */,
+				F7076BF9331C0B4AC1A42ACDD373DE4A /* ThePermissionConfig.m in Sources */,
+				8880508473350FF4970C25D6347FBE70 /* TheRoute-dummy.m in Sources */,
+				CD9F22BA90D8FC503E471414D73C0C10 /* TheRouteCore.m in Sources */,
+				0DD3090FFC2BA95EBA664A9FF86A055A /* TheRouteHelper.m in Sources */,
+				74E4D51D9716E2FED82A73F6163868D8 /* TheRouter.m in Sources */,
+				7A717B2620C0F27A44EEED9B7132A918 /* TheRouteSupport.m in Sources */,
+				E44570AA040396CFA38739902C5F45D2 /* TheServiceConfig.m in Sources */,
+				636B9F9DE69544EF77CA7004498B7737 /* TheServiceProtocol.m in Sources */,
+				81BE17240D309B5051871FCF73C01BC3 /* TheSpecialSchemeConfig.m in Sources */,
+				59F95C7176C20F267053DABDB425706B /* TheSpecialSchemeFilter.m in Sources */,
+				B8AD264DC1B58EFE56563F7C6CD44AE2 /* TheStoryBoardConfig.m in Sources */,
+				D9E310C4E06F38D7EAFFADC95C43F397 /* TheTimerService.m in Sources */,
+				928AB0B312F874D224772CBE0E38DEAB /* TheViewControllerConfig.m in Sources */,
+				71E3459340D4DDA857CF4D2F107F11BC /* TheXibConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A8268381993A7D01EA36F1E8F11942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A869FEE7A9AA19DB4F6E47B76BF5D7E5 /* Pods-TheRouteDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94513013895E07F31443AA67EE15B277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3217188D8D703137A703C6088F8FF135 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TheRoute;
+			target = 40A2260F37D04D0AC03475CF6A9A46B5 /* TheRoute */;
+			targetProxy = 8CE20E2EA975BAF4A0F2DF0001E52FAC /* PBXContainerItemProxy */;
+		};
+		8B6BDA97E17AB7FE6029986FC73D7BD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TheRoute-TheRoute";
+			target = 8EA41828D7E66AAA274F5DCD172F77D7 /* TheRoute-TheRoute */;
+			targetProxy = FE1711B8D41A075ABB8EC232C59EC2AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20CDA650E1025DDACB507EB48406BB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B821FD3091BE9132F72CFF90778FE91 /* Pods-TheRouteDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TheRouteDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		68F8EC59939F758500CEDE5C8D7343DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TheRoute";
+				INFOPLIST_FILE = "Target Support Files/TheRoute/ResourceBundle-TheRoute-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TheRoute;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9376551C38554427F026753D0479F03D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TheRoute";
+				INFOPLIST_FILE = "Target Support Files/TheRoute/ResourceBundle-TheRoute-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TheRoute;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C1BF183E5363E20AAAE16EC7904F6FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TheRoute/TheRoute-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TheRoute/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TheRoute/TheRoute.modulemap";
+				PRODUCT_MODULE_NAME = TheRoute;
+				PRODUCT_NAME = TheRoute;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E82DDCD2AF6E3A5680AFD39223E3611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DACE34080AFC80A6FFE0E5E2CD3F76D7 /* Pods-TheRouteDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TheRouteDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F780A280A629D55B10B9155ECCC8F555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575A75AFAC99A155BF0952C1B523EAE0 /* TheRoute.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TheRoute/TheRoute-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TheRoute/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TheRoute/TheRoute.modulemap";
+				PRODUCT_MODULE_NAME = TheRoute;
+				PRODUCT_NAME = TheRoute;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		083E7D14EEA6D68860D0B0B69E9CDCFC /* Build configuration list for PBXNativeTarget "Pods-TheRouteDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20CDA650E1025DDACB507EB48406BB3A /* Debug */,
+				E82DDCD2AF6E3A5680AFD39223E3611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E30F4ECF0985746B42A3B9D59C58BC6 /* Build configuration list for PBXNativeTarget "TheRoute-TheRoute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68F8EC59939F758500CEDE5C8D7343DC /* Debug */,
+				9376551C38554427F026753D0479F03D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
+				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D23B6DFEDC49E5DD4FD18F56090CDE3C /* Build configuration list for PBXNativeTarget "TheRoute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F780A280A629D55B10B9155ECCC8F555 /* Debug */,
+				C1BF183E5363E20AAAE16EC7904F6FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

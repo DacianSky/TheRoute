@@ -1,0 +1,8 @@
+{
+    "usePackageName": true,
+    "viewcontroller": {
+        "Example": [
+                "ExampleSwiftViewController"
+                ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "white_list_enable": "0",
+    "whitelist": [
+      "WhiteViewController",
+    ]
+  }
+}

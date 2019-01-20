@@ -1,0 +1,38 @@
+{
+  "apppath" : {
+      "filename": "manifest",
+      "themename": "theme.bundle",
+  },
+  "config": {
+    "ThePermissionConfig": [
+      "permissions_white",
+      "permissions_black"
+    ],
+    "TheViewControllerConfig": ["swiftvc"],
+    "TheXibConfig": "xib",
+    "TheStoryBoardConfig": "storyboard",
+    "TheAliasConfig": "alias",
+    "TheServiceConfig": "service",
+    "TheSpecialSchemeConfig": "scheme",
+    "TheOne2ManyConfig": "map"
+  },
+  "filters": {
+    "TheHistoryDirFilter": "",
+    "TheLoginPermissionFilter": "ThePermissionConfig",
+    "TheHttpSchemeFilter": "",
+    "TheAliasFilter": "TheAliasConfig",
+    "TheSpecialSchemeFilter": "TheSpecialSchemeConfig",
+    "TheOpenApplicationFilter" : "",
+    "TheOne2ManyFilter": "TheOne2ManyConfig"
+  },
+  "prioritys": {
+    "TheLoginPermissionFilter": 100,
+    "TheBaseTabbarFilter": -1000,
+    "TheHistoryDirFilter": -600,
+    "TheAliasFilter": 1000,
+    "TheOne2ManyFilter": 1010
+  },
+  "disables": {
+      "TheHistoryDirFilter": true
+  }
+}

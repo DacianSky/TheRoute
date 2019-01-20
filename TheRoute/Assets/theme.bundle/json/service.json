@@ -1,0 +1,6 @@
+{
+  "service" : [
+    "TheBaseService",
+    "TheTimerService"
+  ]
+}

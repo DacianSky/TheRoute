@@ -1,0 +1,9 @@
+{
+    "base":
+    {
+        "_blank_": "UIViewController",
+        "_index_": "/",
+        "dismiss": "dismiss",
+        "_http_": "WebViewController"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "^movie_detail": [
+        {
+            "type": "equal",
+            "url": "example",
+            "handle": "exam"
+        },
+        {
+            "type": "replace",
+            "url": "(example)(.*?)(&?id=(.*))",
+            "handle": "exam$2$3&m_id=$4&M_id=$4&source=-2"
+        }
+    ]
+}
