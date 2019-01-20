@@ -1,0 +1,6 @@
+use_frameworks!
+target 'TheRoute_Tests' do
+  pod 'TheRoute', :path => '../'
+  
+  
+end
