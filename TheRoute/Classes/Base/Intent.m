@@ -32,7 +32,7 @@
 - (void)setRouteName:(NSString *)routeName
 {
     if ([routeName isHttpUrl]) {
-        routeName = [routeName routeDecode];
+        routeName = [routeName theRouteDecode];
     }else{
         NSDictionary *params = [routeName paramsToDict];
         [self putExtras:params];
@@ -76,11 +76,7 @@
 
 - (id)getExtra:(NSString *)key
 {
-    NSString *value = _extras[key];
-    if ([value isKindOfClass:[NSString class]] && [value isHttpUrl]) {
-        value = [value routeencode];
-    }
-    return value;
+    return _extras[key];
 }
 
 - (void)removeExtra:(NSString *)key
@@ -92,9 +88,6 @@
 
 - (void)putExtra:(NSString *)key value:(id)value
 {
-    if ([value isKindOfClass:[NSString class]] && [value isHttpUrl]) {
-        value = [value routeDecode];
-    }
     _extras[key] = value;
 }
 

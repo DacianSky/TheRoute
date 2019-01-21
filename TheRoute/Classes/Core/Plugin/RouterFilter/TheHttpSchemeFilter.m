@@ -57,7 +57,7 @@
     if (!intent) {
         intent = [[Intent alloc] init];
     }
-    [intent putExtra:@"url" value:[self.urlParam routeencode]];
+    [intent putExtra:@"url" value:[self.urlParam theRouteEncode]];
     return intent;
 }
 

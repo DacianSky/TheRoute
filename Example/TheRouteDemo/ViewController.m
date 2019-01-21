@@ -15,10 +15,15 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [UIViewController startEventWithName:@"123"];
+    [UIViewController addEvent:@"testEvent" withAction:^id(NSDictionary *param) {
+        NSLog(@"success");
+        return nil;
+    }];
+    
+    [UIViewController startEventWithName:@"testEvent"];
 }
-
 
 @end

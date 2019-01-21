@@ -7,7 +7,9 @@
 //
 
 #import "NSString+Route.h"
-#define kThemeName @"TheRoute.bundle/theme.bundle"
+
+#define kTheRouteBundleName @"TheRoute.bundle"
+#define kThemeName @"theme.bundle"
 
 // 为你的app定义一个kTheMeRouteScheme全局变量，用来区分路由的自定义前缀
 NSString * kTheMeRouteScheme = @"route";
@@ -51,7 +53,7 @@ void theInitExtraScheme(NSString *scheme)
     return NO;
 }
 
-- (NSString *)routeDecode
+- (NSString *)theRouteDecode
 {
     NSString *unencodedString = self;
     NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)unencodedString,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8));
@@ -59,7 +61,7 @@ void theInitExtraScheme(NSString *scheme)
     return encodedString;
 }
 
-- (NSString *)routeencode
+- (NSString *)theRouteEncode
 {
     NSString *result = [(NSString *)self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
     result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -97,7 +99,7 @@ void theInitExtraScheme(NSString *scheme)
         //给字典加入元素
         if(dicArray.count>=2){
             NSString *key = dicArray[0];
-            NSString *value = [dicArray[1] routeencode];
+            NSString *value = [dicArray[1] theRouteEncode];
             
             id dictValue = paramDict[key];
             if ([dictValue isKindOfClass:[NSString class]]) {
@@ -181,7 +183,7 @@ void theInitExtraScheme(NSString *scheme)
     if(patternRange.location != NSNotFound && patternRange.length > 2){
         result = YES;
         if ([value isKindOfClass:[NSString class]]) {
-            [resultUrl replaceCharactersInRange:patternRange withString:[value routeDecode]];
+            [resultUrl replaceCharactersInRange:patternRange withString:[value theRouteDecode]];
         }else if ([value isKindOfClass:[NSNumber class]]) {
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             NSString *numberStr = [formatter stringFromNumber:value];
@@ -244,7 +246,7 @@ void theInitExtraScheme(NSString *scheme)
         NSArray *paramKV = [paramStr componentsSeparatedByString:@"="];
         if (paramKV.count == 2) {
             NSString *key = [paramKV firstObject];
-            NSString *value = [[paramKV lastObject] routeencode];
+            NSString *value = [[paramKV lastObject] theRouteEncode];
             if ([NSString isNotEmptyAndNull:key] && [NSString isNotEmptyAndNull:value]) {
                 id dictValue = paramDict[key];
                 if ([dictValue isKindOfClass:[NSString class]]) {
@@ -472,34 +474,16 @@ void theInitExtraScheme(NSString *scheme)
 }
 
 #pragma mark - json
-+ (id)jsonWithFileName:(NSString *)filename
++ (id)theRouteJsonWithFileName:(NSString *)filename
 {
-    NSString *jsonstr = [self jsonStringWithFileName:filename];
-    jsonstr = [self parseJsonFile:jsonstr];
-    
-    id jsonObject = [self json2Object:jsonstr];
-    return jsonObject;
-}
-
-+ (id)jsonWithAppFileName:(NSString *)filename andThemeName:(NSString *)themeName
-{
-    NSString *jsonstr = [self jsonStringWithFileName:filename andThemeName:themeName];
-    jsonstr = [self parseJsonFile:jsonstr];
-    
-    id jsonObject = [self json2Object:jsonstr];
-    return jsonObject;
-}
-
-+ (NSString *)jsonStringWithFileName:(NSString *)filename
-{
-    NSString *directory = [NSString stringWithFormat:@"%@/json", kThemeName];
+    NSString *directory = [NSString stringWithFormat:@"%@/%@/json", kTheRouteBundleName,kThemeName];
     NSString *jsonPath = [[NSBundle bundleForClass:NSClassFromString(@"TheRouter")] pathForResource:filename ofType:@".json" inDirectory:directory];
     NSString *jsonstr = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
     
-    return jsonstr;
+    return [self theRouteJsonObject:jsonstr];
 }
 
-+ (NSString *)jsonStringWithFileName:(NSString *)filename andThemeName:(NSString *)themeName
++ (id)theRouteJsonWithAppFileName:(NSString *)filename andThemeName:(NSString *)themeName
 {
     if ([NSString isEmptyOrNull:themeName]) {
         themeName = kThemeName;
@@ -508,40 +492,19 @@ void theInitExtraScheme(NSString *scheme)
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:filename ofType:@".json" inDirectory:directory];
     NSString *jsonstr = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
     
-    return jsonstr;
+    return [self theRouteJsonObject:jsonstr];
 }
 
-+ (NSString *)parseJsonFile:(NSString *)jsonstr
-{
-    id jsonObject = [self json2Object:jsonstr];
-    if ([jsonObject isKindOfClass:[NSDictionary class]] || [jsonObject isKindOfClass:[NSArray class]]) {
-        return jsonstr; //没加密的直接返回
-    }
-    
-    NSMutableString *decode = [@"" mutableCopy];
-    NSString *str = jsonstr;
-    for (int i = 0; i < str.length; i++) {
-        int ch = [str characterAtIndex:i];
-        int decode_ch = (ch - 1) ^ 110;
-        [decode appendString:[NSString stringWithFormat:@"%c",decode_ch]];
-    }
-    
-    NSString *originJson = jsonstr
-    ; //__thouTEXT(decode); // 加密文本处理
-    return originJson;
-}
-
-+ (id)json2Object:(NSString *)jsonstr
++ (id)theRouteJsonObject:(NSString *)jsonstr
 {
     NSData *jsonData = [jsonstr dataUsingEncoding:NSUTF8StringEncoding];
     
     NSDictionary *json;
-    
     NSError *error;
     if (jsonData) {
         json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
     }
-    
+    NSAssert(!error, @"json解析失败：%@",jsonstr);
     return json;
 }
 

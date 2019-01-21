@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define ThemeJson(filename) [NSString jsonWithFileName:(filename)]
-#define ThemeAppJson(filename,themename) [NSString jsonWithAppFileName:(filename) andThemeName:(themename)]
+#define ThemeJson(filename) [NSString theRouteJsonWithFileName:(filename)]
+#define ThemeAppJson(filename,themename) [NSString theRouteJsonWithAppFileName:(filename) andThemeName:(themename)]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,8 +21,8 @@ NSString * subSameComponent(NSString *str1,NSString *str2, char separate);
 - (BOOL)isTheRouteUrl;
 - (BOOL)supportScheme:(NSString *)scheme;
 
-- (NSString *)routeDecode;
-- (NSString *)routeencode;
+- (NSString *)theRouteDecode;
+- (NSString *)theRouteEncode;
 
 /**
  *  解析一个url，将url中参数转换为字典
@@ -70,8 +70,8 @@ NSString * subSameComponent(NSString *str1,NSString *str2, char separate);
 - (NSString *)regexReplce:(NSString *)regular handle:(NSString *)handle;
 
 #pragma mark - json
-+ (id)jsonWithFileName:(NSString *)filename;
-+ (id)jsonWithAppFileName:(NSString *)filename andThemeName:(NSString *)themeName;
++ (id)theRouteJsonWithFileName:(NSString *)filename;
++ (id)theRouteJsonWithAppFileName:(NSString *)filename andThemeName:(NSString *)themeName;
 
 @end
 
