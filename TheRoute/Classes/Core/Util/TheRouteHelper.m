@@ -61,7 +61,7 @@
 + (UITabBarController *)getAppTabbar
 {
     UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
-    if ([vc isKindOfClass:[UITabBarController class]]) {
+    if ([vc isKindOfClass:[UITabBarController class]] || [vc conformsToProtocol:@protocol(UITabBarDelegate)]) {
         return (UITabBarController *)vc;
     }
     return nil;
@@ -71,7 +71,7 @@
 {
     UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     UINavigationController *nav;
-    if ([vc isKindOfClass:[UITabBarController class]]) {
+    if ([vc isKindOfClass:[UITabBarController class]] || [vc conformsToProtocol:@protocol(UITabBarDelegate)] ) {
         UITabBarController *tabbarVC = (UITabBarController *)vc;
         nav = tabbarVC.selectedViewController;
     }else if ([vc isKindOfClass:[UINavigationController class]]){
@@ -79,6 +79,7 @@
     }
     return nav;
 }
+
 
 + (BOOL)isBlock:(id)value
 {
