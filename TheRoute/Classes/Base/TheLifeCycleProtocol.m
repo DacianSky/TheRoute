@@ -108,22 +108,10 @@
 - (void)onRotate:(UIDeviceOrientation)newOrientation{}
 - (void)rotated:(UIDeviceOrientation)oldOrientation{}
 
-- (BOOL)isPresentShow
-{
-    BOOL flag = YES;
-    NSArray *viewcontrollers = self.navigationController.viewControllers;
-    if (viewcontrollers.count > 1) {
-        if ([viewcontrollers objectAtIndex:viewcontrollers.count - 1] == self) {
-            flag =  NO;
-        }
-    }
-    return flag;
-}
-
 - (void)onReturn
 {
     BOOL animation = [self dismissAnimation];
-    if ([self isPresentShow]) {
+    if ([self presentingViewController]) {
         [self dismissViewControllerAnimated:animation completion:^{}];
     }else{
         [self.navigationController popViewControllerAnimated:animation];

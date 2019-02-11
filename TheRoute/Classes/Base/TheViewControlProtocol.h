@@ -16,6 +16,7 @@
 @property(nonatomic,readonly) NSArray<__kindof UIViewController *> *childViewControllers;
 @property(nonatomic,assign) BOOL extendedLayoutIncludesOpaqueBars;
 @property(nonatomic,assign) BOOL automaticallyAdjustsScrollViewInsets;
+@property(nullable, nonatomic,readonly) UIViewController *presentingViewController;
 
 - (void)dismissViewControllerAnimated: (BOOL)flag completion: (void (^ __nullable)(void))completion;
 
