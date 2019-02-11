@@ -337,7 +337,7 @@ void theInitExtraScheme(NSString *scheme)
 {
     NSString *result = self;
     
-    NSRange range = [result rangeOfString:@"\\?[a-zA-Z=_&0-9:/%\\-.\u4e00-\u9fa5]+#?" options:NSRegularExpressionSearch];
+    NSRange range = [result rangeOfString:@"\\?[a-zA-Z=_&{,}0-9:/%\\-.\u4e00-\u9fa5]+#?" options:NSRegularExpressionSearch];
     
     if (range.location != NSNotFound) {
         NSString *subStr = [result substringWithRange:range];
