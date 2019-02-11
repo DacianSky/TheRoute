@@ -133,10 +133,17 @@ if ([NSThread isMainThread]) {\
     if (done){
         // pop
         UIViewController *toVC = bottomvcs.lastObject;
+        
+        BOOL animation = YES;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        if ([toVC respondsToSelector:@selector(dismissAnimation)]) { animation = (BOOL)[toVC performSelector:@selector(dismissAnimation)];}
+#pragma clang diagnostic pop
+        
         dispatch_async_main_safe(^{
             [self willRoute:fromVC to:toVC];
             [TheRouteHelper map:toVC params:param];
-            [nav popToViewController:toVC animated:YES];
+            [nav popToViewController:toVC animated:animation];
             [self didRoute:toVC to:toVC];
         });
     }else {
@@ -155,6 +162,12 @@ if ([NSThread isMainThread]) {\
         }while (!toVC && components.count);
         toVC.hidesBottomBarWhenPushed = YES;
         
+        BOOL animation = YES;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        if ([toVC respondsToSelector:@selector(showAnimation)]) { animation = (BOOL)[toVC performSelector:@selector(showAnimation)];}
+#pragma clang diagnostic pop
+        
         NSMutableArray *vcs = [bottomvcs mutableCopy];
         for (int i = 0 ; i < components.count; i++) {
             NSString *key = components[i];
@@ -170,7 +183,7 @@ if ([NSThread isMainThread]) {\
             [self willRoute:fromVC to:toVC];
             [TheRouteHelper map:toVC params:param]; //这里的设置参数才会直接初始化；TheIntentProtocol里面的初始化时机在loadView和viewWillAppear:，避免参数提前被消化
             [nav setViewControllers:vcs animated:NO];
-            [nav pushViewController:toVC animated:YES];
+            [nav pushViewController:toVC animated:animation];
             [self didRoute:toVC to:toVC];
         });
     }

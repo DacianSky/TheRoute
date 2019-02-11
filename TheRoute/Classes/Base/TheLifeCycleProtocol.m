@@ -122,16 +122,22 @@
 
 - (void)onReturn
 {
+    BOOL animation = [self dismissAnimation];
     if ([self isPresentShow]) {
-        [self dismissViewControllerAnimated:[self dismissAnimation] completion:^{}];
+        [self dismissViewControllerAnimated:animation completion:^{}];
     }else{
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:animation];
     }
 }
 
 - (void)returnClick
 {
     theExecuteUndeclaredSelector(self,@selector(finish));
+}
+
+- (BOOL)showAnimation
+{
+    return YES;
 }
 
 - (BOOL)dismissAnimation
