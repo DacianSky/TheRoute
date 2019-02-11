@@ -390,6 +390,12 @@ void __executeRoute(NSString *url)
     [_theRoute run:@"[..]"];
 }
 
++ (void)finish
+{
+    theContainer *vc = (theContainer *)[TheRouteHelper getAppCurrentNavigation].topViewController;
+    [vc finish];
+}
+
 - (void)finish
 {
     if (![self respondsToSelector:@selector(needReturn)] || ![self performSelector:@selector(needReturn)]) {

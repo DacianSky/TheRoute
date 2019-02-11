@@ -86,6 +86,7 @@ typedef void(^ IntentReusltCallBack)(UIViewController *vc,Intent *intent);
 // 返回到根界面
 - (void)forwardRoot;
 // 关闭并返回到上一个界面
++ (void)finish;
 - (void)finish;
 // 关闭并返回到指定界面
 - (void)finishForward:(NSString *)forward;
