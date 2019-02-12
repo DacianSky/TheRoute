@@ -114,8 +114,8 @@ if ([NSThread isMainThread]) {\
     if ([NSString isEmptyOrNull:url] || [self executeException:url]) {
         return;
     }
-    NSString *parse = [[self parse:url] getUrlBody];
     NSDictionary *param = [url getAllParameterDict];
+    NSString *parse = [self parse:[url getUrlBody]];
     
     UIViewController *fromVC = [TheRouteHelper getAppCurrentNavigation].topViewController;
     [self prepareSelectTabbar:parse];

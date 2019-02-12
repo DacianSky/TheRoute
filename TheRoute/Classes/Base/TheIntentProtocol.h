@@ -56,7 +56,9 @@ typedef void(^ IntentReusltCallBack)(UIViewController *vc,Intent *intent);
 - (void)startViewControllerForResult:(Intent *)intent;
 - (void)startViewController:(Intent *)intent finish:(IntentReusltCallBack)finish; // 路由完成将要push，在这里可以细微调整定制
 
++ (void)shouldStartViewController:(Intent *)intent;
 - (void)shouldStartViewController:(Intent *)intent;
++ (void)didStartViewController:(Intent *)intent;
 - (void)didStartViewController:(Intent *)intent;
 
 - (void)retainViewController:(NSString *)key; // 当控制器被维持住时，startViewController碰到相同键值时将直接使用维持的这个控制器

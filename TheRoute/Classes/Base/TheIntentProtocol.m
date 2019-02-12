@@ -243,8 +243,10 @@ void __executeRoute(NSString *url)
     }
     
     [_theRoute addEvent:kEventNeedDelayRoute forOnceAction:^id(id  _Nonnull param) {
+        [theContainer shouldStartViewController];
         [_theRoute addProperty:theParameterKey toValue:intent];
         [_theRoute run:intent.absoluteRoute done:finish];
+        [theContainer didStartViewController];
         return nil;
     }];
     if([self canRoute]){
@@ -364,7 +366,9 @@ void __executeRoute(NSString *url)
     [_theRoute run:[NSString stringWithFormat:@"../%@",forward]];
 }
 
++ (void)shouldStartViewController:(Intent *)intent{}
 - (void)shouldStartViewController:(Intent *)intent{}
++ (void)didStartViewController:(Intent *)intent{}
 - (void)didStartViewController:(Intent *)intent{}
 
 - (BOOL)navigationShouldPopOnBackButton
