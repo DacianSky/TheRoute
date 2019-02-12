@@ -147,14 +147,17 @@ void __executeRoute(NSString *url)
         if ( (parameterIntent.paramOccasion && parameterIntent.paramOccasion != self.paramOccasion) || parameterIntent.paramOccasion & IntentParamOccasionResult || !parameterIntent.extras || parameterIntent.extras == NULL || [parameterIntent.extras isKindOfClass:[NSNull class] ]) {
             return;
         }
-        self.parameterIntent = parameterIntent;
-        [self shouldViewControllerParam:self.parameterIntent];
-        if (self.parameterIntent) {
-            [TheRouteHelper map:self params:self.parameterIntent.extras];
-            [self onViewControllerParam:self.parameterIntent];
-        }
-        [self didViewControllerParam:self.parameterIntent];
+        [self buildParameterIntent:parameterIntent];
     }
+}
+
+- (void)buildParameterIntent:(Intent *)parameterIntent
+{
+    self.parameterIntent = [self shouldViewControllerParam:parameterIntent];
+    if (self.parameterIntent) {
+        [self onViewControllerParam:self.parameterIntent];
+    }
+    [self didViewControllerParam:self.parameterIntent];
 }
 
 - (void)setupResultIntent
@@ -414,8 +417,17 @@ void __executeRoute(NSString *url)
 - (void)didReturn{}
 
 - (void)onViewControllerResult:(Intent *)intent{}
-- (void)shouldViewControllerParam:(Intent *)intent{}
-- (void)onViewControllerParam:(Intent *)intent{}
+
+- (Intent *)shouldViewControllerParam:(Intent *)intent
+{
+    return intent;
+}
+
+- (void)onViewControllerParam:(Intent *)intent
+{
+    [TheRouteHelper map:self params:intent.extras];
+}
+
 - (void)didViewControllerParam:(Intent *)intent{}
 
 #pragma mark - private

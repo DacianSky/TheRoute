@@ -26,6 +26,7 @@
 - (BOOL)existExtra:(NSString *)key;
 - (id)getExtra:(NSString *)key;
 - (void)removeExtra:(NSString *)key;
+- (void)removeExtras:(NSArray *)keys;
 - (void)putExtra:(NSString *)key value:(id)value;
 - (void)putExtras:(NSDictionary *)extras;
 

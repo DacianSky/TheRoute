@@ -86,6 +86,13 @@
     }
 }
 
+- (void)removeExtras:(NSArray *)keys
+{
+    for (NSString *key in keys) {
+        [_extras removeObjectForKey:key];
+    }
+}
+
 - (void)putExtra:(NSString *)key value:(id)value
 {
     _extras[key] = value;
@@ -106,6 +113,7 @@
     intent.routeName = [self.routeName copy];
     intent.extras = [self.extras mutableCopy];
     intent.category = self.category;
+    intent.paramOccasion = self.paramOccasion;
     
     return intent;
 }

@@ -83,6 +83,9 @@ extern NSString * const kProjectSpecialScheme;
 
 - (Intent *)routerFilterParam:(Intent *)paramIntent
 {
+    if (!self.params.allKeys.count) {
+        return paramIntent;
+    }
     Intent *intent = paramIntent;
     if (!intent) {
         intent = [[Intent alloc] init];

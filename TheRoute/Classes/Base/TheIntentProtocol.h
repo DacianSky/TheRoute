@@ -70,7 +70,8 @@ typedef void(^ IntentReusltCallBack)(UIViewController *vc,Intent *intent);
 - (NSString *)queryViewControllerName:(NSString *)url;
 - (__kindof UIViewController *)queryViewController:(NSString *)url;
 // 从跳转过来的界面拿到参数
-- (void)shouldViewControllerParam:(Intent *)intent;
+- (void)buildParameterIntent:(Intent *)parameterIntent; // 用于手动设置子视图控制器参数
+- (Intent *)shouldViewControllerParam:(Intent *)intent;
 - (void)onViewControllerParam:(Intent *)intent; //有参数设置时才会被调用
 - (void)didViewControllerParam:(Intent *)intent;
 // 从上个界面拿到返回值后会回调该方法
