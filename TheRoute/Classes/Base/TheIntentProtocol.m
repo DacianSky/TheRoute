@@ -553,7 +553,7 @@ void __executeRoute(NSString *url)
 
 + (void)finish
 {
-    [(theContainer *)self finish];
+    [theContainer finish];
 }
 
 + (void)registeRoute:(NSString *)name object:(id)object
