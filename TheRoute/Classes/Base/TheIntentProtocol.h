@@ -33,6 +33,8 @@ typedef void(^ IntentReusltCallBack)(UIViewController *vc,Intent *intent);
 
 @protocol TheIntentBaseProtocol <NSObject>
 
++ (void)finish;
+
 + (void)startViewController:(Intent *)intent;
 + (void)startViewController:(Intent *)intent finish:(IntentReusltCallBack)finish;
 

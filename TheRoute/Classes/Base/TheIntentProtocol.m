@@ -551,6 +551,11 @@ void __executeRoute(NSString *url)
     [self the_loadView];
 }
 
++ (void)finish
+{
+    [(theContainer *)self finish];
+}
+
 + (void)registeRoute:(NSString *)name object:(id)object
 {
     [theContainer registeRoute:name object:object];
