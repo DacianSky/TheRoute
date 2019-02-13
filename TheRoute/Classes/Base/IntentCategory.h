@@ -17,6 +17,7 @@ typedef NS_OPTIONS(NSUInteger, IntentParamOccasion) {
     IntentParamOccasionAppear = 1 << 2,
     IntentParamOccasionException = 1 << 3,
     IntentParamOccasionResult = 1 << 4,
+    IntentParamOccasionRefuse = 1 << 5, // 不接受参数，通常用于避免子视图控制器提前消化参数
     IntentParamOccasionBoth = IntentParamOccasionInit | IntentParamOccasionAppear,
     IntentParamOccasionAll = IntentParamOccasionInit | IntentParamOccasionAppear | IntentParamOccasionResult | IntentParamOccasionException
 };

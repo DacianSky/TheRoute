@@ -144,7 +144,7 @@ void __executeRoute(NSString *url)
     //有值说明跳转过来的界面有传递参数
     if ([self conformsToProtocol:@protocol(TheIntentProtocol)]) {
         Intent *parameterIntent = [_theRoute propertyValueForKey:theParameterKey];
-        if ( (parameterIntent.paramOccasion && parameterIntent.paramOccasion != self.paramOccasion) || parameterIntent.paramOccasion & IntentParamOccasionResult || !parameterIntent.extras || parameterIntent.extras == NULL || [parameterIntent.extras isKindOfClass:[NSNull class] ]) {
+        if (self.paramOccasion & IntentParamOccasionRefuse || (parameterIntent.paramOccasion && parameterIntent.paramOccasion != self.paramOccasion) || parameterIntent.paramOccasion & IntentParamOccasionResult || !parameterIntent.extras || parameterIntent.extras == NULL || [parameterIntent.extras isKindOfClass:[NSNull class] ]) {
             return;
         }
         [self buildParameterIntent:parameterIntent];
@@ -243,10 +243,10 @@ void __executeRoute(NSString *url)
     }
     
     [_theRoute addEvent:kEventNeedDelayRoute forOnceAction:^id(id  _Nonnull param) {
-        [theContainer shouldStartViewController];
+        [self shouldStartViewController:intent];
         [_theRoute addProperty:theParameterKey toValue:intent];
         [_theRoute run:intent.absoluteRoute done:finish];
-        [theContainer didStartViewController];
+        [self didStartViewController:intent];
         return nil;
     }];
     if([self canRoute]){
