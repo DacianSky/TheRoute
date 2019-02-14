@@ -9,7 +9,7 @@
 #import "TheRouteCore.h"
 #import "TheRouteHelper.h"
 #import "NSString+Route.h"
-
+#import "TheRouteConst.h"
 #import "TheEventProtocol.h"
 
 #define dispatch_async_main_safe(block)\
@@ -142,7 +142,7 @@ if ([NSThread isMainThread]) {\
         
         dispatch_async_main_safe(^{
             [self willRoute:fromVC to:toVC];
-            [TheRouteHelper map:toVC params:param];
+            [self onRoute:toVC param:param];
             [nav popToViewController:toVC animated:animation];
             [self didRoute:toVC to:toVC];
         });
@@ -181,7 +181,7 @@ if ([NSThread isMainThread]) {\
         
         dispatch_async_main_safe(^{
             [self willRoute:fromVC to:toVC];
-            [TheRouteHelper map:toVC params:param]; //这里的设置参数才会直接初始化；TheIntentProtocol里面的初始化时机在loadView和viewWillAppear:，避免参数提前被消化
+            [self onRoute:toVC param:param]; //这里的设置参数才会直接初始化；TheIntentProtocol里面的初始化时机在loadView和viewWillAppear:，避免参数提前被消化
             [nav setViewControllers:vcs animated:NO];
             [nav pushViewController:toVC animated:animation];
             [self didRoute:toVC to:toVC];
@@ -289,6 +289,19 @@ if ([NSThread isMainThread]) {\
 {
     if ([self.delegate respondsToSelector:@selector(willRoute:to:)]) {
         [self.delegate willRoute:from to:to];
+    }
+}
+
+- (void)onRoute:(UIViewController *)dest param:(NSDictionary *)param
+{
+    [TheRouteHelper map:dest params:param];
+    if (dest.parentViewController) {
+        theExecuteUndeclaredSelector(dest,@selector(paramAppear));
+    }else{
+        theExecuteUndeclaredSelector(dest,@selector(paramInit));
+    }
+    if ([self.delegate respondsToSelector:@selector(onRoute:param:)]) {
+        [self.delegate onRoute:dest param:param];
     }
 }
 

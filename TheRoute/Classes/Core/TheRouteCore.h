@@ -18,6 +18,7 @@ typedef id(^ TheRouteMapAction)(void);
 - (UIViewController *)lastViewControllerForKey:(NSString *)key;
 
 - (void)willRoute:(UIViewController *)from to:(UIViewController *)to;
+- (void)onRoute:(UIViewController *)dest param:(NSDictionary *)param;
 - (void)didRoute:(UIViewController *)from to:(UIViewController *)to;
 
 - (void)willSelectTabbar;

@@ -525,32 +525,6 @@ void __executeRoute(NSString *url)
 
 @implementation UIViewController (Intent)
 
-+ (void)load
-{
-    theSwizzleMethod(self, @selector(viewWillAppear:), @selector(the_viewWillAppear:));
-    theSwizzleMethod(self, @selector(loadView), @selector(the_loadView));
-}
-
-- (void)the_viewWillAppear:(BOOL)animated
-{
-    if(![self respondsToSelector:@selector(setupInit)]){
-        [self the_viewWillAppear:animated];
-        return;
-    }
-    [(theContainer *)self paramAppear];
-    [self the_viewWillAppear:animated];
-}
-
-- (void)the_loadView
-{
-    if(![self respondsToSelector:@selector(setupInit)]){
-        [self the_loadView];
-        return;
-    }
-    [(theContainer *)self paramInit];
-    [self the_loadView];
-}
-
 + (void)finish
 {
     [theContainer finish];
