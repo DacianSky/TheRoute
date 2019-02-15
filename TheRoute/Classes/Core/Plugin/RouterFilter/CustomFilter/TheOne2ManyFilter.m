@@ -91,7 +91,7 @@ extern NSString * const kProjectSpecialScheme;
         intent = [[Intent alloc] init];
     }
     [intent putExtras:self.params];
-    
+    self.params = nil;
     return intent;
 }
 

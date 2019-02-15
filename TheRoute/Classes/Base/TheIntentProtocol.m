@@ -117,9 +117,6 @@ void __executeRoute(NSString *url)
 
 - (void)paramAppear
 {
-    if([[self class] needDelayRoute]){
-        [_theRoute executeEvent:kEventNeedDelayRoute];
-    }
     if (self.paramOccasion & IntentParamOccasionAppear) {
         [self setupParameterIntent];
     }
@@ -524,6 +521,23 @@ void __executeRoute(NSString *url)
 @end
 
 @implementation UIViewController (Intent)
+
++ (void)load
+{
+    theSwizzleMethod(self, @selector(viewDidLoad), @selector(the_viewDidLoad));
+}
+
+- (void)the_viewDidLoad
+{
+    if(![self respondsToSelector:@selector(setupInit)]){
+        [self the_viewDidLoad];
+        return;
+    }
+    
+    if([theContainer needDelayRoute]){
+        [_theRoute executeEvent:kEventNeedDelayRoute];
+    }
+}
 
 + (void)finish
 {

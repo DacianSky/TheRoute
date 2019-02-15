@@ -269,17 +269,13 @@ void theSwizzleMethod(Class clz,SEL origin,SEL swizzle)
 // 实现了协议的类会尝试调用类的loaded方法
 __attribute__((constructor)) void call_class_loadeds()
 {
-    int count = objc_getClassList(NULL, 0);
-    if (count <= 0) {
-        return;
-    }
     Class vc = NSClassFromString(@"UIViewController");
-    Class *list = (Class *)malloc(sizeof(Class)*count);
-    objc_getClassList(list, count);
+    unsigned int count;
+    Class *list = objc_copyClassList(&count);
     
     for (int i = 0; i < count; i++) {
         Class clz = *(list+i);
-        if (!class_getSuperclass(clz) || ![clz isSubclassOfClass:vc]) {
+        if ([NSStringFromClass(clz) hasPrefix:@"WKNS"] || !class_getSuperclass(clz) || ![clz isSubclassOfClass:vc]) {
             continue;
         }
         for (size_t i = 0;i < the_specialProtocolCount;++i) {

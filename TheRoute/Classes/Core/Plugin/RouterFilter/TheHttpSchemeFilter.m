@@ -58,6 +58,7 @@
         intent = [[Intent alloc] init];
     }
     [intent putExtra:@"url" value:[self.urlParam theRouteEncode]];
+    self.urlParam = nil;
     return intent;
 }
 
