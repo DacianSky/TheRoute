@@ -31,7 +31,6 @@
         return;
     }
     [self prepareReloadVC];
-    [self reloadView];
     [self didReloadVC];
 }
 
@@ -41,7 +40,10 @@
 }
 
 - (void)prepareReloadVC{}
-- (void)didReloadVC{}
+- (void)didReloadVC
+{
+    [self reloadView];
+}
 
 - (void)reloadView{}
 
