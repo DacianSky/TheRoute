@@ -107,7 +107,7 @@ void __executeRoute(NSString *url)
 #pragma mark - 无路由环境路由延迟，通常用在通知进入app打开的第一个页面是广告页而不是主页面
 + (BOOL)canRoute
 {
-    return (BOOL)[TheRouteHelper getAppCurrentNavigation];
+    return [TheRouteHelper getAppCurrentNavigation] != nil;
 }
 
 + (BOOL)needDelayRoute
