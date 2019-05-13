@@ -125,6 +125,16 @@
     theExecuteUndeclaredSelector(self,@selector(finish));
 }
 
+- (void)setTransition:(id<UINavigationControllerDelegate>)transition
+{
+    objc_setAssociatedObject(self, @selector(transition), transition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (id<UINavigationControllerDelegate>)transition
+{
+    return objc_getAssociatedObject(self, @selector(transition));
+}
+
 - (BOOL)showAnimation
 {
     return YES;

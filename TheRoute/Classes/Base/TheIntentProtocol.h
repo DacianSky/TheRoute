@@ -15,7 +15,7 @@
 // 不可路由条件下是否等待有路由执行条件后开始执行路由
 void theDelayRightTime(BOOL flag);
 
-typedef void(^ IntentReusltCallBack)(UIViewController *vc,Intent *intent);
+typedef void(^ IntentReusltCallBack)(__kindof UIViewController *vc,Intent *intent);
 
 @protocol TheAliasRegux <NSObject>
 

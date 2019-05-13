@@ -166,6 +166,7 @@ if ([NSThread isMainThread]) {\
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
         if ([toVC respondsToSelector:@selector(showAnimation)]) { animation = (BOOL)[toVC performSelector:@selector(showAnimation)];}
+        if ([toVC respondsToSelector:@selector(transition)]) {nav.delegate = [toVC performSelector:@selector(transition)];}else{nav.delegate = nil;}
 #pragma clang diagnostic pop
         
         NSMutableArray *vcs = [bottomvcs mutableCopy];
@@ -210,7 +211,7 @@ if ([NSThread isMainThread]) {\
         }
         if (tbc.selectedIndex != i) {
             [self willSelectTabbar];
-            [(UINavigationController *)tbc.selectedViewController popViewControllerAnimated:NO];
+            [(UINavigationController *)tbc.selectedViewController popToRootViewControllerAnimated:NO];
             tbc.selectedIndex = i;
             UINavigationController *nav = tbc.selectedViewController;
             [(id<UITabBarControllerDelegate>)tbc.delegate tabBarController:tbc didSelectViewController:nav.topViewController];
