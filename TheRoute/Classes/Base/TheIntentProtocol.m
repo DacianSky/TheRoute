@@ -212,7 +212,7 @@ void __executeRoute(NSString *url)
 + (NSString *)queryViewControllerName:(NSString *)url
 {
     id value = [_theRoute pureUrl:url];
-    if (![value isKindOfClass:[NSString class]] || ![NSClassFromString(value) isKindOfClass:[UIViewController class]]) {
+    if (![value isKindOfClass:[NSString class]] && ![NSClassFromString(value) isKindOfClass:[UIViewController class]]) {
         value = nil;
     }
     return value;
