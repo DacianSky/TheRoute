@@ -103,15 +103,21 @@ static TheRouter * _instance = nil;
 
 - (NSString *)pureUrl:(NSString *)url
 {
-    return [[self queryUrlValue:url] getUrlBody];
+    return [[self queryUrl:url] getUrlBody];
 }
 
-- (id)queryUrlValue:(NSString *)urlString
+- (NSString *)queryUrl:(NSString *)urlString
 {
     [self setEnv:envQueryUrl value:@(YES)];
     urlString = [self translateUrl:urlString];
     [self setEnv:envQueryUrl value:@(NO)];
     
+    return urlString;
+}
+
+- (id)queryUrlValue:(NSString *)urlString
+{
+    urlString = [self queryUrl:urlString];
     return [self.core instanceForKey:urlString];
 }
 

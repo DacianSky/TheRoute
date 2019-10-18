@@ -37,6 +37,7 @@ extern NSString * const envQueryUrl;
 
 - (NSString *)queryRoute:(id)object;
 - (NSString *)pureUrl:(NSString *)url;
+- (NSString *)queryUrl:(NSString *)urlString;
 - (id)queryUrlValue:(NSString *)url;
 - (void)run:(NSString *)url done:(TheRouterCallBack)callBack;
 - (void)run:(NSString *)url;
