@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class Intent;
 
-typedef id(^ TheRouterActionBlock)(id param);
+typedef id _Nullable (^ TheRouterActionBlock)(id param);
 typedef void(^ TheRouterCallBack)(UIViewController *vc,Intent *intent);
 
 @protocol TheSupportProtocol <NSObject>
