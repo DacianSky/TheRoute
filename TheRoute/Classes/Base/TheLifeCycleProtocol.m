@@ -8,6 +8,7 @@
 
 #import "TheLifeCycleProtocol.h"
 #import "MethodInjecting.h"
+#import "TheRouter.h"
 
 @the_concreteprotocol(TheLifeCycleProtocol)
 
@@ -112,11 +113,14 @@
 
 - (void)onReturn
 {
-    BOOL animation = [self dismissAnimation];
+    BOOL animation = YES;
+    if ([self respondsToSelector:@selector(animation)]) {
+        animation = (BOOL)[self performSelector:@selector(animation)];
+    }
     if ([self presentingViewController]) {
         [self dismissViewControllerAnimated:animation completion:^{}];
     }else{
-        [self.navigationController popViewControllerAnimated:animation];
+        [_theRoute run:@".."];
     }
 }
 
