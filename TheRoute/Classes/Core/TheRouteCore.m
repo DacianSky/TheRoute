@@ -132,12 +132,13 @@ if ([NSThread isMainThread]) {\
     NSArray *bottomvcs = [nav.viewControllers subarrayWithRange:NSMakeRange(0, index>1?index:1)];
     if (done){
         // pop
+        UIViewController *topVC = nav.topViewController;
         UIViewController *toVC = bottomvcs.lastObject;
         
         BOOL animation = YES;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
-        if ([toVC respondsToSelector:@selector(dismissAnimation)]) { animation = (BOOL)[toVC performSelector:@selector(dismissAnimation)];}
+        if ([topVC respondsToSelector:@selector(dismissAnimation)]) { animation = (BOOL)[topVC performSelector:@selector(dismissAnimation)];}
 #pragma clang diagnostic pop
         
         dispatch_async_main_safe(^{
