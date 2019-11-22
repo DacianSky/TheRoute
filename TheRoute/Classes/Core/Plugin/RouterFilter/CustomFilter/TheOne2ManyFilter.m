@@ -67,7 +67,7 @@ extern NSString * const kProjectSpecialScheme;
                 }
             }else if ([@"replace" isEqualToString:regualarMap[@"type"]]) {
                 NSString *text = [filterUrl regexReplce:regualarMap[@"url"] handle:regualarMap[@"handle"]];
-                if(!text){
+                if(text){
                     filterUrl = text;
                     self.needRefreshEnv = YES;
                     break;
