@@ -186,7 +186,7 @@ if ([NSThread isMainThread]) {\
             [self onRoute:toVC param:param]; //这里的设置参数才会直接初始化；TheIntentProtocol里面的初始化时机在loadView和viewWillAppear:，避免参数提前被消化
             [nav setViewControllers:vcs animated:NO];
             [nav pushViewController:toVC animated:animation];
-            [self didRoute:toVC to:toVC];
+            [self didRoute:fromVC to:toVC];
         });
     }
 }
