@@ -477,8 +477,16 @@ void theInitExtraScheme(NSString *scheme)
 + (id)theRouteJsonWithFileName:(NSString *)filename
 {
     NSString *directory = [NSString stringWithFormat:@"%@/%@/json", kTheRouteBundleName,kThemeName];
-    NSString *jsonPath = [[NSBundle bundleForClass:NSClassFromString(@"TheRouter")] pathForResource:filename ofType:@".json" inDirectory:directory];
-    NSString *jsonstr = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+    #if !TARGET_OS_MACCATALYST
+    
+        NSString *jsonPath = [[NSBundle bundleForClass:NSClassFromString(@"TheRouter")] pathForResource:filename ofType:@".json" inDirectory:directory];
+        NSString *jsonstr = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+    #else
+    
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:filename ofType:@".json" inDirectory:directory];
+        NSString *jsonstr = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+        
+    #endif
     
     return [self theRouteJsonObject:jsonstr];
 }
