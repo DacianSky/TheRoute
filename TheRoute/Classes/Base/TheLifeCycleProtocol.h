@@ -52,6 +52,7 @@
 - (void)reloadView;
 
 @property (nonatomic, strong) id<UINavigationControllerDelegate> transition;
+- (BOOL)showAnimation;
 - (BOOL)dismissAnimation;
 
 - (UIInterfaceOrientationMask)allowOrientations;
