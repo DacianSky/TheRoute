@@ -227,6 +227,12 @@ void __executeRoute(NSString *url)
     return value;
 }
 
++ (void)startViewControllerWithName:(NSString *)name
+{
+    Intent *intent = [Intent intentWithRouteName:name];
+    [self startViewController:intent];
+}
+
 + (void)startViewController:(Intent *)intent
 {
     [self startViewController:intent finish:nil];
@@ -284,6 +290,12 @@ void __executeRoute(NSString *url)
         self.needResult_ = intent.category;
     }
     
+    [self startViewController:intent];
+}
+
+- (void)startViewControllerWithName:(NSString *)name
+{
+    Intent *intent = [Intent intentWithRouteName:name];
     [self startViewController:intent];
 }
 

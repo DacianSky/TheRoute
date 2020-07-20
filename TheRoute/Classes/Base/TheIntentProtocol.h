@@ -35,6 +35,7 @@ typedef void(^ IntentReusltCallBack)(__kindof UIViewController *vc,Intent *inten
 
 + (void)finish;
 
++ (void)startViewControllerWithName:(NSString *)name;
 + (void)startViewController:(Intent *)intent;
 + (void)startViewController:(Intent *)intent finish:(IntentReusltCallBack)finish;
 
@@ -54,6 +55,7 @@ typedef void(^ IntentReusltCallBack)(__kindof UIViewController *vc,Intent *inten
 @property (nonatomic,assign) IntentParamOccasion paramOccasion;
 - (id<TheIntentProtocol>)judegeNeedResult:(IntentCategory)category;
 
+- (void)startViewControllerWithName:(NSString *)name;
 - (void)startViewController:(Intent *)intent;
 - (void)startViewControllerForResult:(Intent *)intent;
 - (void)startViewController:(Intent *)intent finish:(IntentReusltCallBack)finish; // 路由完成将要push，在这里可以细微调整定制
