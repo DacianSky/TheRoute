@@ -38,6 +38,7 @@
 - (void)onDestroy;
 
 - (void)onReturn; //返回过程中
+- (void)returnAction; //返回过程具体执行方法
 - (void)returnClick;
 
 

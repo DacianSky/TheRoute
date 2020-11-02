@@ -210,11 +210,12 @@
 				ORGANIZATIONNAME = "sdqvsqiu@gmail.com";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = 254E2VR4TC;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 					C91CB8B721F4C39E002A3F3A = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = FA96LB4633;
+						DevelopmentTeam = 254E2VR4TC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,6 +225,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -265,21 +267,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TheRoute/TheRoute.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TheRoute.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1A0DB2629FC276AC8587CDB /* [CP] Check Pods Manifest.lock */ = {
@@ -431,6 +429,7 @@
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 254E2VR4TC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -453,6 +452,7 @@
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 254E2VR4TC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -493,7 +493,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = FA96LB4633;
+				DEVELOPMENT_TEAM = 254E2VR4TC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -534,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = FA96LB4633;
+				DEVELOPMENT_TEAM = 254E2VR4TC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;

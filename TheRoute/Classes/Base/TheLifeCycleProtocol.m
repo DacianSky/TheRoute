@@ -113,6 +113,11 @@
 
 - (void)onReturn
 {
+    [self returnAction];
+}
+
+- (void)returnAction
+{
     BOOL animation = YES;
     if ([self respondsToSelector:@selector(animation)]) {
         animation = (BOOL)[self performSelector:@selector(animation)];
