@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger,LoginRefreshType) {
     
     // 是否需要被过滤
     BOOL filterFlag;
-    if (!self.configFile.white_list_enable) {
+    if (!self.configFile.isWhitelistEnable) {
         filterFlag = [self checkBlackList:url];
     }else{
         filterFlag = ![self checkWhiteList:url];
@@ -75,13 +75,12 @@ typedef NS_ENUM(NSInteger,LoginRefreshType) {
     NSString *filterUrl = url;
     if(filterFlag){
         NSString *filterActionUrl = _filterAction?_filterAction(filterUrl):filterUrl;
+        self.needRefreshEnv = YES;
         if (!filterActionUrl) {
             self.updateType = LoginRefreshTypeQueryUrl;
-            self.needRefreshEnv = YES;
             filterUrl = @"";
         }else{
             self.updateType = LoginRefreshTypeRedirect;
-            self.needRefreshEnv = YES;
             filterUrl = filterActionUrl;
         }
     }

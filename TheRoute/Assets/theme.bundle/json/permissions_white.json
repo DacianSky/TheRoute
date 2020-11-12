@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "white_list_enable": "0",
+    "whitelistEnable": "0",
     "whitelist": [
       "WhiteViewController",
     ]

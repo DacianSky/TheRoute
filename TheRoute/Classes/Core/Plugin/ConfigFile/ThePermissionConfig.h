@@ -17,7 +17,7 @@
  *
  *  @since 1.0
  */
-@property (nonatomic) BOOL white_list_enable;
+@property (nonatomic,getter=isWhitelistEnable) BOOL whitelistEnable;
 @property (nonatomic,strong) NSMutableArray *whitelist;
 @property (nonatomic,strong) NSMutableArray *blacklist;
 
