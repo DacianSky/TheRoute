@@ -31,8 +31,7 @@
     
     _whitelist?:(void)(_whitelist = [@[] mutableCopy]);
     _blacklist?:(void)(_blacklist = [@[] mutableCopy]);
-    
-    self.white_list_enable = [permissions[@"white_list_enable"] boolValue];
+    _white_list_enable?:(void)(_white_list_enable = [permissions[@"white_list_enable"] boolValue]);
 }
 
 - (NSMutableArray *)whitelist
