@@ -5,8 +5,8 @@
   },
   "config": {
     "ThePermissionConfig": [
-      "permissions_white",
-      "permissions_black"
+      "permissions_black",
+      "permissions_white"
     ],
     "TheViewControllerConfig": ["swiftvc"],
     "TheXibConfig": "xib",

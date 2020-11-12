@@ -74,9 +74,16 @@ typedef NS_ENUM(NSInteger,LoginRefreshType) {
     
     NSString *filterUrl = url;
     if(filterFlag){
-        self.updateType = LoginRefreshTypeRedirect;
-        self.needRefreshEnv = YES;
-        filterUrl = @"login";
+        NSString *filterActionUrl = _filterAction?_filterAction(filterUrl):filterUrl;
+        if (!filterActionUrl) {
+            self.updateType = LoginRefreshTypeQueryUrl;
+            self.needRefreshEnv = YES;
+            filterUrl = @"";
+        }else{
+            self.updateType = LoginRefreshTypeRedirect;
+            self.needRefreshEnv = YES;
+            filterUrl = filterActionUrl;
+        }
     }
     
     return filterUrl;
@@ -94,17 +101,12 @@ typedef NS_ENUM(NSInteger,LoginRefreshType) {
 - (BOOL)checkWhiteList:(NSString *)url
 {
     BOOL filterFlag = false;
-    
     for (NSString *key in self.configFile.whitelist) {
-        
         NSArray *fragmentUrls = [url componentsSeparatedByString:@"/"];
-        
         for (NSString *fragmentUrl in fragmentUrls) {
-            
             if ([fragmentUrl rangeOfString:key].location != NSNotFound) {
                 filterFlag = true;
             }
-            
         }
     }
     return filterFlag;

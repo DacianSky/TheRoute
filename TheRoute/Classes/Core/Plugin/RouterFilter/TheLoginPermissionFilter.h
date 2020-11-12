@@ -10,6 +10,7 @@
 #import "ThePermissionConfig.h"
 
 typedef BOOL(^ LoginFilter)(void);
+typedef NSString *(^ FilterAction)(NSString *filterUrl);
 
 @interface TheLoginPermissionFilter : TheBaseRouterFilter
 
@@ -21,5 +22,14 @@ typedef BOOL(^ LoginFilter)(void);
  *  @since 1.0
  */
 @property (nonatomic,copy) LoginFilter loginFilterBlock;
+
+/**
+ *  @author TheMe, 20-11-06 18:16:06
+ *
+ *  @brief 确定过滤之后的行为处理
+ *
+ *  @since 1.0
+ */
+@property (nonatomic,copy) FilterAction filterAction;
 
 @end

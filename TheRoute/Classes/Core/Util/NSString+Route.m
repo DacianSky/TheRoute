@@ -427,7 +427,7 @@ void theInitExtraScheme(NSString *scheme)
 
 + (BOOL)isEmptyOrNull: (NSString *)string
 {
-    if (![string isKindOfClass:[NSString class]] || [string isKindOfClass:[NSNull class]] || string == nil || [string isEqualToString:@""] || [string isEqualToString:@"undefined"] || [string isEqualToString:@"null"])
+    if (![string isKindOfClass:[NSString class]] || [string isKindOfClass:[NSNull class]] || string == nil || [string isEqualToString:@""] || [string isEqualToString:@"undefined"] || [string isEqualToString:@"null"] || [string isEqualToString:@"<null>"])
         return true;
     return false;
 }
