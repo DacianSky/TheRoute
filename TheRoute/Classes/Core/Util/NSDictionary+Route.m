@@ -98,3 +98,32 @@
 }
 
 @end
+
+
+@implementation NSMutableDictionary(Route)
+
+- (NSMutableDictionary *)mergeDictionary:(NSDictionary *)dict
+{
+    NSMutableDictionary *result = self;
+    if (![dict isKindOfClass:[NSDictionary class]]) {
+        return result;
+    }
+    
+    NSDictionary *origin = [self mutableCopy];
+    NSDictionary *patch = [dict mutableCopy];
+    
+    NSArray *keys = patch.allKeys;
+    for (NSString *key in keys) {
+        id vOrigin = origin[key];
+        id vPatch = patch[key];
+        if ([vOrigin isKindOfClass:[NSDictionary class]] && [vPatch isKindOfClass:[NSDictionary class]]) {
+            result[key] = [vOrigin mergeDictionary:vPatch];
+        }else{
+            result[key] = vPatch;
+        }
+    }
+    
+    return result;
+}
+
+@end
