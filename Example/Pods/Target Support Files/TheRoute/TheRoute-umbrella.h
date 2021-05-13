@@ -30,6 +30,7 @@
 #import "TheOne2ManyFilter.h"
 #import "TheAliasFilter.h"
 #import "TheBaseRouterFilter.h"
+#import "TheEventFilter.h"
 #import "TheHistoryDirFilter.h"
 #import "TheHttpSchemeFilter.h"
 #import "TheLoginPermissionFilter.h"
