@@ -23,12 +23,14 @@
     "TheAliasFilter": "TheAliasConfig",
     "TheSpecialSchemeFilter": "TheSpecialSchemeConfig",
     "TheOpenApplicationFilter" : "",
-    "TheOne2ManyFilter": "TheOne2ManyConfig"
+    "TheOne2ManyFilter": "TheOne2ManyConfig",
+    "TheEventFilter" : ""
   },
   "prioritys": {
     "TheLoginPermissionFilter": 100,
     "TheBaseTabbarFilter": -1000,
     "TheHistoryDirFilter": -600,
+    "TheEventFilter": 800,
     "TheAliasFilter": 1000,
     "TheOne2ManyFilter": 1010
   },

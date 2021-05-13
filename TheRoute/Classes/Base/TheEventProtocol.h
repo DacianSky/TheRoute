@@ -16,6 +16,10 @@
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
 + (void)addEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
 
++ (void)removeEvent:(NSString *)name;
+
++ (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name;
+
 @end
 
 @protocol TheEventProtocol <TheEventBaseProtocol>

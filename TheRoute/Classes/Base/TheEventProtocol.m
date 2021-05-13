@@ -34,6 +34,16 @@
     [_theRoute addEvent:name forOnceAction:actionBlock]; // 模拟未启动
 }
 
++ (void)removeEvent:(NSString *)name
+{
+    [_theRoute removeEvent:name];
+}
+
++ (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
+{
+    [_theRoute addParameter:parameter forEvent:name];
+}
+
 - (id)startEventWithName:(NSString *)name
 {
     return [[self class] startEventWithName:name];
@@ -56,12 +66,12 @@
 
 - (void)removeEvent:(NSString *)name
 {
-    [_theRoute removeEvent:name];
+    [[self class] removeEvent:name];
 }
 
 - (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
 {
-    [_theRoute addParameter:parameter forEvent:name];
+    [[self class] addParameter:parameter forEvent:name];
 }
 
 #pragma mark - event
@@ -74,7 +84,7 @@
 
 - (void)bindEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
-    [_theRoute addEvent:kBindEventName forOnceAction:actionBlock];
+    [self addEventPerformOnce:kBindEventName withAction:actionBlock];
 }
 
 - (id)fireEventWithName:(NSString *)name
@@ -89,7 +99,7 @@
 
 - (void)unbindEvent:(NSString *)name
 {
-    [_theRoute removeEvent:kBindEventName];
+    [self removeEvent:kBindEventName];
 }
 
 @end
@@ -114,6 +124,16 @@
 + (void)addEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [theContainer addEventPerformOnce:name withAction:actionBlock];
+}
+
++ (void)removeEvent:(NSString *)name
+{
+    [theContainer removeEvent:name];
+}
+
++ (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
+{
+    [theContainer addParameter:parameter forEvent:name];
 }
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import "TheEventFilter.h"
+#import <TheRoute/TheRoute.h>
 #import "NSString+Route.h"
 #import "TheRouter.h"
 
+// 路由映射到事件，暂不能映射到绑定对象事件@selector(bindEvent:withAction:)
 @implementation TheEventFilter
 
 - (BOOL)couldStandProcessingUrl:(NSString *)url
