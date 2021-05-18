@@ -13,7 +13,7 @@
 @optional
 @property(null_resettable, nonatomic,strong) UIView *view;
 @property(nullable, nonatomic,readonly,strong) UINavigationController *navigationController;
-@property(nonatomic,readonly) NSArray<__kindof UIViewController *> *childViewControllers;
+@property(nonatomic,readonly) NSArray<__kindof UIViewController *> * _Nullable childViewControllers;
 @property(nonatomic,assign) BOOL extendedLayoutIncludesOpaqueBars;
 @property(nonatomic,assign) BOOL automaticallyAdjustsScrollViewInsets;
 @property(nullable, nonatomic,readonly) UIViewController *presentingViewController;

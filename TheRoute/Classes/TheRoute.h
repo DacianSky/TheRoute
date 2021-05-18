@@ -27,3 +27,8 @@
 @interface UIViewController () <TheIntentBaseProtocol,TheEventBaseProtocol,TheServiceBaseProtocol>
 @end
 
+
+void callLibLoaded(const void * addr);
+
+// 在组件初始化时调用，用于自动注册短路由
+#define routeAliasRegister callLibLoaded(&@selector(load))

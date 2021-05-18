@@ -6,6 +6,11 @@
 #import "MethodInjecting.h"
 #import <pthread.h>
 
+#import <objc/runtime.h>
+#import <dlfcn.h>
+#import <mach-o/ldsyms.h>
+#import <mach-o/dyld.h>
+
 typedef struct TheSpecialProtocol {
     __unsafe_unretained Protocol *protocol;
     Class containerClass;
@@ -266,29 +271,54 @@ void theSwizzleMethod(Class clz,SEL origin,SEL swizzle)
 
 @end
 
-// 实现了协议的类会尝试调用类的loaded方法
-__attribute__((constructor)) void call_class_loadeds()
+
+
+
+BOOL class_conformTheSpecialProtocol(Class class)
 {
-    Class vc = NSClassFromString(@"UIViewController");
-    unsigned int count;
-    Class *list = objc_copyClassList(&count);
-    
-    for (int i = 0; i < count; i++) {
-        Class clz = *(list+i);
-        if ([NSStringFromClass(clz) hasPrefix:@"WKNS"] || !class_getSuperclass(clz) || ![clz isSubclassOfClass:vc]) {
-            continue;
-        }
-        for (size_t i = 0;i < the_specialProtocolCount;++i) {
-            @autoreleasepool {
-                Protocol *protocol = the_specialProtocols[i].protocol;
-                if (![clz conformsToProtocol:protocol]) {
-                    continue;
-                }else{
-                    theExecuteUndeclaredSelector(clz,@selector(loaded));
-                    break;
-                }
+    for (size_t i = 0;i < the_specialProtocolCount;++i) {
+        @autoreleasepool {
+            Protocol *protocol = the_specialProtocols[i].protocol;
+            if ([class conformsToProtocol:protocol]) {
+                return YES;
             }
         }
     }
-    free(list);
+    return NO;
 }
+
+NSArray <Class> * getSpecialClzes(const void * addr)
+{
+    NSMutableArray *resultArray = [NSMutableArray array];
+    
+    unsigned int classCount;
+    const char **classes;
+    Dl_info info;
+    
+    dladdr(addr, &info);
+    classes = objc_copyClassNamesForImage(info.dli_fname, &classCount);
+    
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    dispatch_apply(classCount, dispatch_get_global_queue(0, 0), ^(size_t index) {
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSString *className = [NSString stringWithCString:classes[index] encoding:NSUTF8StringEncoding];
+        Class class = NSClassFromString(className);
+        if (class_conformTheSpecialProtocol(class)) {
+            [resultArray addObject:class];
+        }
+        dispatch_semaphore_signal(semaphore);
+    });
+    free(classes);
+    
+    return resultArray.mutableCopy;
+}
+
+// 实现了协议的类会尝试调用类的loaded方法,所有类的loaded被调用的顺序是随机的，可能子类的loaded会比父类先调用
+void callLibLoaded(const void * addr)
+{
+    NSArray <Class> *list = getSpecialClzes(addr);
+    for (int i = 0; i < list.count; i++) {
+        theExecuteUndeclaredSelector(list[i],@selector(loaded));
+    }
+}
+

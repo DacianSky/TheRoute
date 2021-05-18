@@ -117,7 +117,9 @@ void __executeRoute(NSString *url)
 
 - (void)paramAppear
 {
-    if (self.paramOccasion & IntentParamOccasionAppear) {
+    Intent *pi = [_theRoute queryPropertyValueForKey:theParameterKey];
+    if ((self.paramOccasion & IntentParamOccasionAppear && pi.paramOccasion & IntentParamOccasionAppear)
+        || pi.paramOccasion & IntentParamOccasionForce) {
         [self setupParameterIntent];
     }
     [self setupResultIntent];
@@ -125,7 +127,9 @@ void __executeRoute(NSString *url)
 
 - (void)paramInit
 {
-    if (self.paramOccasion & IntentParamOccasionInit) {
+    Intent *pi = [_theRoute queryPropertyValueForKey:theParameterKey];
+    if ((self.paramOccasion & IntentParamOccasionInit && pi.paramOccasion & IntentParamOccasionInit)
+        || pi.paramOccasion & IntentParamOccasionForce) {
         [self setupParameterIntent];
     }
     [self setupResultIntent];
@@ -141,11 +145,20 @@ void __executeRoute(NSString *url)
     //有值说明跳转过来的界面有传递参数
     if ([self conformsToProtocol:@protocol(TheIntentProtocol)]) {
         Intent *parameterIntent = [_theRoute propertyValueForKey:theParameterKey];
-        if (self.paramOccasion & IntentParamOccasionRefuse || (parameterIntent.paramOccasion && parameterIntent.paramOccasion != self.paramOccasion) || parameterIntent.paramOccasion & IntentParamOccasionResult || !parameterIntent.extras || parameterIntent.extras == NULL || [parameterIntent.extras isKindOfClass:[NSNull class] ]) {
-            return;
+        if ([self judgeParamOccasion:parameterIntent]) {
+            [self buildParameterIntent:parameterIntent];
         }
-        [self buildParameterIntent:parameterIntent];
     }
+}
+
+- (BOOL)judgeParamOccasion:(Intent *)parameterIntent
+{
+    if(parameterIntent.paramOccasion == IntentParamOccasionForce) return YES;
+    if(self.paramOccasion & IntentParamOccasionRefuse) return NO;
+    if(parameterIntent.paramOccasion & IntentParamOccasionResult) return NO;
+    if(!parameterIntent.extras || parameterIntent.extras == NULL || [parameterIntent.extras isKindOfClass:NSNull.class]) return NO;
+    if(self.paramOccasion && !(parameterIntent.paramOccasion & self.paramOccasion)) return NO;
+    return YES;
 }
 
 - (void)buildParameterIntent:(Intent *)parameterIntent
@@ -455,7 +468,7 @@ void __executeRoute(NSString *url)
     }
 }
 
-- (id<TheIntentProtocol>)judegeNeedResult:(IntentCategory)category
+- (id<TheIntentProtocol>)judgeNeedResult:(IntentCategory)category
 {
     UIViewController<TheIntentProtocol> *svc = (UIViewController<TheIntentProtocol> *)self;
     UIViewController<TheIntentProtocol> *respondVC = nil;
@@ -466,7 +479,7 @@ void __executeRoute(NSString *url)
         for(UIViewController<TheIntentProtocol> *cvc in svc.childViewControllers){
             if([cvc conformsToProtocol:@protocol(TheIntentProtocol)]){
                 // 假如不是自己期待的返回值，可能不是返回给自己的。
-                if([cvc judegeNeedResult:category]){
+                if([cvc judgeNeedResult:category]){
                     respondVC = cvc;
                     break;
                 }
@@ -589,6 +602,13 @@ void __executeRoute(NSString *url)
 + (void)startViewController:(Intent *)intent
 {
     [theContainer startViewController:intent];
+}
+
++ (void)registeToIntentProtocol
+{
+    
+    class_addProtocol(self, @protocol(TheIntentProtocol));
+//    [self registeToIntentProtocol];
 }
 
 @end

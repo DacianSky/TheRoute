@@ -20,7 +20,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        _paramOccasion = IntentParamOccasionNone;
+        _paramOccasion = IntentParamOccasionBoth;
         _category = IntentCategoryDefault;
         _routeName = @".";  //默认是当前目录
         _extras = [@{} mutableCopy];

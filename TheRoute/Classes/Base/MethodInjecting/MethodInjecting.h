@@ -51,3 +51,6 @@ BOOL the_addConcreteProtocol (Protocol *protocol, Class methodContainer);
 void the_loadConcreteProtocol (Protocol *protocol);
 
 void theSwizzleMethod(Class clz,SEL origin,SEL swizzle);
+
+// 实现了协议的类会尝试调用类的loaded方法
+void callLibLoaded(const void * addr);

@@ -12,6 +12,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		A530C20E2653BA0F00C7362C /* TheForceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A530C20D2653BA0F00C7362C /* TheForceViewController.m */; };
+		A530C2172653BB8900C7362C /* TheAliasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A530C2162653BB8900C7362C /* TheAliasViewController.m */; };
 		A5EBEB31264D4A8A0068B311 /* TheShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EBEB30264D4A8A0068B311 /* TheShowViewController.m */; };
 		C45C1A1CAE6867FB472D591D /* Pods_TheRouteDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E78D3E7DA792194865DE47 /* Pods_TheRouteDemo.framework */; };
 		C91CB8BC21F4C39E002A3F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C91CB8BB21F4C39E002A3F3A /* AppDelegate.m */; };
@@ -37,6 +39,10 @@
 		8FD66F32DC2B2C384514D45C /* TheRoute.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TheRoute.podspec; path = ../TheRoute.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9ADA445E81F1858BB533DE7A /* Pods-TheRouteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRouteDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C2C988B715B8067EDCA5FFA /* Pods_TheRoute_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheRoute_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A530C20C2653BA0F00C7362C /* TheForceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheForceViewController.h; sourceTree = "<group>"; };
+		A530C20D2653BA0F00C7362C /* TheForceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheForceViewController.m; sourceTree = "<group>"; };
+		A530C2152653BB8900C7362C /* TheAliasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheAliasViewController.h; sourceTree = "<group>"; };
+		A530C2162653BB8900C7362C /* TheAliasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheAliasViewController.m; sourceTree = "<group>"; };
 		A5EBEB2F264D4A8A0068B311 /* TheShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheShowViewController.h; sourceTree = "<group>"; };
 		A5EBEB30264D4A8A0068B311 /* TheShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheShowViewController.m; sourceTree = "<group>"; };
 		BE171828BD1A7384A8B6D282 /* Pods-TheRouteDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheRouteDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheRouteDemo/Pods-TheRouteDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +162,10 @@
 				C91CB8BE21F4C39E002A3F3A /* ViewController.m */,
 				A5EBEB2F264D4A8A0068B311 /* TheShowViewController.h */,
 				A5EBEB30264D4A8A0068B311 /* TheShowViewController.m */,
+				A530C20C2653BA0F00C7362C /* TheForceViewController.h */,
+				A530C20D2653BA0F00C7362C /* TheForceViewController.m */,
+				A530C2152653BB8900C7362C /* TheAliasViewController.h */,
+				A530C2162653BB8900C7362C /* TheAliasViewController.m */,
 				C91CB8C021F4C39E002A3F3A /* Main.storyboard */,
 				C91CB8C321F4C39F002A3F3A /* Assets.xcassets */,
 				C91CB8C521F4C39F002A3F3A /* LaunchScreen.storyboard */,
@@ -325,7 +335,9 @@
 				C91CB8BF21F4C39E002A3F3A /* ViewController.m in Sources */,
 				C91CB8CA21F4C39F002A3F3A /* main.m in Sources */,
 				C91CB8BC21F4C39E002A3F3A /* AppDelegate.m in Sources */,
+				A530C20E2653BA0F00C7362C /* TheForceViewController.m in Sources */,
 				A5EBEB31264D4A8A0068B311 /* TheShowViewController.m in Sources */,
+				A530C2172653BB8900C7362C /* TheAliasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

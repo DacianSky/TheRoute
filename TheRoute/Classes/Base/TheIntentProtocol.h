@@ -39,6 +39,8 @@ typedef void(^ IntentReusltCallBack)(__kindof UIViewController *vc,Intent *inten
 + (void)startViewController:(Intent *)intent;
 + (void)startViewController:(Intent *)intent finish:(IntentReusltCallBack)finish;
 
++ (void)registeToIntentProtocol;    // 手动给一些不支持TheIntentProtocol的类注册该协议，配合IntentParamOccasionForce强制路由并传递参数
+
 + (void)registeRoute:(NSString *)name object:(id)object;
 + (void)unregisterRoute:(NSString *)name;
 
@@ -53,7 +55,7 @@ typedef void(^ IntentReusltCallBack)(__kindof UIViewController *vc,Intent *inten
 @optional
 
 @property (nonatomic,assign) IntentParamOccasion paramOccasion;
-- (id<TheIntentProtocol>)judegeNeedResult:(IntentCategory)category;
+- (id<TheIntentProtocol>)judgeNeedResult:(IntentCategory)category;  // 判断路由返回时返回值是给praent对象还是child对象
 
 - (void)startViewControllerWithName:(NSString *)name;
 - (void)startViewController:(Intent *)intent;

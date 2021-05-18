@@ -18,8 +18,9 @@ typedef NS_OPTIONS(NSUInteger, IntentParamOccasion) {
     IntentParamOccasionException = 1 << 3,
     IntentParamOccasionResult = 1 << 4,
     IntentParamOccasionRefuse = 1 << 5, // 不接受参数，通常用于避免子视图控制器提前消化参数
+    IntentParamOccasionForce = 1 << 6, // 强制接受参数，通常用于路由到未遵循TheIntentProtocol协议又想传递参数的对象
     IntentParamOccasionBoth = IntentParamOccasionInit | IntentParamOccasionAppear,
-    IntentParamOccasionAll = IntentParamOccasionInit | IntentParamOccasionAppear | IntentParamOccasionResult | IntentParamOccasionException
+    IntentParamOccasionAll = IntentParamOccasionInit | IntentParamOccasionAppear | IntentParamOccasionResult | IntentParamOccasionException | IntentParamOccasionForce
 };
 
 typedef NS_ENUM(NSUInteger,IntentCategory){
