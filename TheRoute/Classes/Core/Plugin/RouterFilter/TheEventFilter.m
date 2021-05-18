@@ -34,8 +34,11 @@
         url = [url deleteScheme];
         NSString *event = [url getUrlBody];
         NSDictionary *params = [[_theRoute queryPropertyValueForKey:theParameterKey] valueForKey:@"extras"];
-        [UIViewController startEventWithName:event withParam:params];
-        return @"";
+        NSString *ret = [UIViewController startEventWithName:event withParam:params];    // 事件路由中可以拼接参数等
+        if ([NSString isEmptyOrNull:ret]) {
+            ret = @"";
+        }
+        return ret;
     }
     return url;
 }
