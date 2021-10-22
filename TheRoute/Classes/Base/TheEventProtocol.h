@@ -15,6 +15,7 @@
 
 + (id)startGroupEvent:(NSString *)group;
 + (id)startGroupEvent:(NSString *)group withParam:(NSDictionary *)param;
++ (id)startGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param;
 
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
 + (void)addEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
@@ -37,14 +38,19 @@
 - (id)startEventWithName:(NSString *)name;
 - (id)startEventWithName:(NSString *)name withParam:(NSDictionary *)param;
 
-- (id)startGroupEvent:(NSString *)group;    // 批量执行事件
+- (id)startGroupEvent:(NSString *)group;
 - (id)startGroupEvent:(NSString *)group withParam:(NSDictionary *)param;
+- (id)startGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param;
 
 - (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
 - (void)addEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
 
 - (void)addEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock;
-- (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock;
+- (void)addEventPerformOnce:(NSString *)name group:(NSString *)group withAction:(id(^)(NSDictionary *param))actionBlock;
+
+- (void)addGroup:(NSString *)group prepareAction:(id(^)(NSDictionary *param))actionBlock;
+- (void)addGroup:(NSString *)group afterAction:(id(^)(NSDictionary *param))actionBlock;
+- (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock;
 
 - (void)removeEvent:(NSString *)name;
 - (void)removeGroupEvent:(NSString *)group;     // 批量移除事件

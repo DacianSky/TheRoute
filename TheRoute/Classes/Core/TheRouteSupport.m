@@ -91,6 +91,23 @@ static NSString *eventOncePrefix = @"_event_once_";
     [self addEvent:name forOnceAction:action];
 }
 
+static NSString *eventGroupPreparePrefix = @"_event_group_type_";
+- (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock
+{
+    if (!group.length) {
+        return;
+    }
+    actionType = actionType.length ? actionType : @"prepare";
+    identifier = identifier.length ? identifier : @"default";
+    NSString *identifierName = [NSString stringWithFormat:@"%@%@_%@",eventGroupPreparePrefix,actionType,identifier];
+//    NSMutableArray *identifierList = self.map[identifierName];
+//    if (![identifierList isKindOfClass:NSMutableArray.class]) {
+//        identifierList = [@[] mutableCopy];
+//    }
+//    [identifierList addObject:actionBlock];
+    self.map[identifierName] = actionBlock;
+}
+
 - (void)removeEvent:(NSString *)name
 {
     NSString *eventParameterName = [NSString stringWithFormat:@"%@%@",eventParameterPrefix,name];
@@ -126,12 +143,12 @@ static NSString *eventOncePrefix = @"_event_once_";
 
 - (id)executeEvent:(NSString *)name
 {
-    return [self executeEvent:name withParameter:@{}];
+    return [self executeEvent:name withParameter:[@{} mutableCopy]];
 }
 
 - (id)executeGroupEvent:(NSString *)group
 {
-    return [self executeGroupEvent:group withParameter:@{}];
+    return [self executeGroupEvent:group withParameter:[@{} mutableCopy]];
 }
 
 static NSString *eventParameterPrefix = @"_event_parameter_";
@@ -169,7 +186,7 @@ static NSString *eventParameterPrefix = @"_event_parameter_";
     if (!name.length) {
         return nil;
     }
-    NSString *eventName = [NSString stringWithFormat:@"%@%@",eventPrefix,name];
+    NSString *eventName = [name hasPrefix:eventPrefix] ? name : [NSString stringWithFormat:@"%@%@",eventPrefix,name];
     TheRouterActionBlock block = self.map[eventName];
     if (!block || block == NULL) {
         NSString *onceEventName = [NSString stringWithFormat:@"%@%@",eventOncePrefix,name];
@@ -188,21 +205,56 @@ static NSString *eventParameterPrefix = @"_event_parameter_";
 
 - (id)executeGroupEvent:(NSString *)group withParameter:(id)param
 {
+    return [self executeGroupEvent:group identifier:@"default" type:nil withParameter:param];
+}
+
+- (id)executeGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParameter:(id)param
+{
     if (!group.length) {
         return nil;
     }
-    NSMutableArray *resultList = [@[] mutableCopy];
     
+    NSArray *event_group_type_prepare = nil;
+    NSArray *event_group_type_after = nil;
+    if([actionType hasPrefix:@"prepare"]){
+        event_group_type_prepare = [self groupTypeFilter:@"prepare" identifier:aspectIdentifier];
+    }else if([actionType hasPrefix:@"after"]){
+        event_group_type_after = [self groupTypeFilter:@"after" identifier:aspectIdentifier];
+    }else if (!actionType.length) {
+        event_group_type_prepare = [self groupTypeFilter:@"prepare" identifier:aspectIdentifier];
+        event_group_type_after = [self groupTypeFilter:@"after" identifier:aspectIdentifier];
+    }else{
+        event_group_type_prepare = [self groupTypeFilter:actionType identifier:aspectIdentifier];
+    }
+    
+    for (NSString *name in event_group_type_prepare) {
+        [self executeEvent:name withParameter:param];
+    }
+    
+    NSMutableArray *resultList = [@[] mutableCopy];
     NSString *groupName = [NSString stringWithFormat:@"%@%@",eventGroupPrefix,group];
     NSArray *groupList = [self.group[groupName] copy];
     for (NSString *name in groupList) {
-        id result = [self executeEvent:name withParameter:param];
+        id result = [self executeEvent:name withParameter:[param copy]];
         if (result) {
             [resultList addObject:result];
         }
     }
     
+    for (NSString *name in event_group_type_after) {
+        [self executeEvent:name withParameter:param];
+    }
+    
     return resultList;
+}
+
+- (id)groupTypeFilter:(NSString *)actionType identifier:(NSString *)aspectIdentifier
+{
+    NSString *identifier = [NSString stringWithFormat:@"%@%@",eventGroupPreparePrefix,actionType];
+    identifier = !aspectIdentifier.length ? identifier : [NSString stringWithFormat:@"%@_%@",identifier,aspectIdentifier];
+    
+    NSArray *event_group_type = [self.map.allKeys filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF BEGINSWITH %@", identifier]];
+    return event_group_type;
 }
 
 @end

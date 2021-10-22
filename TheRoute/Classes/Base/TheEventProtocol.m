@@ -34,6 +34,11 @@
     return [_theRoute executeGroupEvent:group withParameter:param];
 }
 
++ (id)startGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param
+{
+    return [_theRoute executeGroupEvent:group identifier:aspectIdentifier type:actionType withParameter:param];
+}
+
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [_theRoute addEvent:name forAction:actionBlock];
@@ -52,6 +57,21 @@
 + (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [_theRoute addEvent:name group:group forOnceAction:actionBlock];
+}
+
++ (void)addGroup:group prepareAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [self addGroup:group identifier:nil type:@"prepare" action:actionBlock];
+}
+
++ (void)addGroup:group afterAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [self addGroup:group identifier:nil type:@"after" action:actionBlock];
+}
+
++ (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock
+{
+    [_theRoute addGroup:group identifier:identifier type:actionType action:actionBlock];
 }
 
 + (void)removeEvent:(NSString *)name
@@ -94,6 +114,11 @@
     return [[self class] startGroupEvent:group withParam:(NSDictionary *)param];
 }
 
+- (id)startGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param
+{
+    return [[self class] startGroupEvent:group identifier:aspectIdentifier type:actionType withParam:param];
+}
+
 - (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [[self class] addEvent:name withAction:actionBlock];
@@ -112,6 +137,21 @@
 - (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [[self class] addEventPerformOnce:name group:group withAction:actionBlock];
+}
+
+- (void)addGroup:(NSString *)group prepareAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [[self class] addGroup:group prepareAction:actionBlock];
+}
+
+- (void)addGroup:(NSString *)group afterAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [[self class] addGroup:group afterAction:actionBlock];
+}
+
+- (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock
+{
+    [[self class] addGroup:group identifier:identifier type:actionType action:actionBlock];
 }
 
 - (void)removeEvent:(NSString *)name
@@ -186,6 +226,11 @@
     return [theContainer startGroupEvent:group withParam:param];
 }
 
++ (id)startGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param
+{
+    return [theContainer startGroupEvent:group identifier:aspectIdentifier type:actionType withParam:param];
+}
+
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [theContainer addEvent:name withAction:actionBlock];
@@ -204,6 +249,21 @@
 + (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [theContainer addEventPerformOnce:name group:group withAction:actionBlock];
+}
+
++ (void)addGroup:group prepareAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [theContainer addGroup:group prepareAction:actionBlock];
+}
+
++ (void)addGroup:group afterAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [theContainer addGroup:group afterAction:actionBlock];
+}
+
++ (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock
+{
+    [theContainer addGroup:group identifier:identifier type:actionType action:actionBlock];
 }
 
 + (void)removeEvent:(NSString *)name

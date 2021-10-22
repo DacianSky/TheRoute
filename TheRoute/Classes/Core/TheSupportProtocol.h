@@ -26,12 +26,14 @@ typedef void(^ TheRouterCallBack)(UIViewController *vc,Intent *intent);
 - (void)addEvent:(NSString *)name group:(NSString *)group forAction:(TheRouterActionBlock)action;
 - (void)addEvent:(NSString *)name forOnceAction:(TheRouterActionBlock)action;
 - (void)addEvent:(NSString *)name group:(NSString *)group forOnceAction:(TheRouterActionBlock)action;
+- (void)addGroup:(NSString *)group identifier:(NSString *)identifier type:(NSString *)actionType action:(id(^)(NSDictionary *param))actionBlock;
 - (void)removeEvent:(NSString *)name;
 - (void)removeGroupEvent:(NSString *)group;
 - (id)executeEvent:(NSString *)name;
 - (id)executeGroupEvent:(NSString *)group;
 - (id)executeEvent:(NSString *)name withParameter:(id)param;
 - (id)executeGroupEvent:(NSString *)group withParameter:(id)param;
+- (id)executeGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(nullable NSString *)actionType withParameter:(id)param;
 - (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name;
 - (void)addParameter:(NSDictionary *)parameter forGroup:(NSString *)group;
 

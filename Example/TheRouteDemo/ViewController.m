@@ -49,8 +49,6 @@
         NSLog(@"route block success");
         return [TheShowViewController new];
     }];
-    
-    [self addGroupEvent];
 }
 
 - (IBAction)routeUrl:(id)sender
@@ -80,13 +78,15 @@
 
 - (IBAction)groupEvent:(id)sender
 {   // 批量处理事件
+    [self addGroupEvent];
+    
     [self startEventWithName:@"GroupEvent"];    // 单条执行组事件中某事件
     [self startGroupEvent:kTestGroupEvent];     // 执行组事件
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self startGroupEvent:kTestGroupEvent withParam:@{@"title":@"批量事件"}];     // 执行带参数组事件
+        [self startGroupEvent:kTestGroupEvent identifier:@"TestId" type:@"TestType" withParam:@{@"title":@"切面Test"}];   // 执行带参数组事件并执行指定切面事件
     });
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self startEventWithName:@"GroupEvent" withParam:@{@"title":@"单条事件"}];    // 执行单参数事件
+        [self startEventWithName:@"GroupEvent" withParam:@{@"title":@"单条事件"}];    // 执行带参数事件
         [self removeGroupEvent:kTestGroupEvent];    // 执行组事件
         [self startGroupEvent:kTestGroupEvent];     // 移除组事件后无法再次执行
     });
@@ -157,7 +157,22 @@
 - (void)addGroupEvent
 {
     __weak typeof(self) _self = self;
+    [self addGroup:@"GroupEvent" prepareAction:^id(NSDictionary *param) {
+        NSLog(@"GroupEvent prepare--------");
+        return @"prepare";
+    }];
+    [self addGroup:@"GroupEvent" afterAction:^id(NSDictionary *param) {
+        NSLog(@"--------GroupEvent after");
+        return @"after";
+    }];
+    
+    [self addGroup:@"GroupEvent" identifier:@"TestId" type:@"TestType" action:^id(NSDictionary *param) {
+        NSLog(@"--------GroupTest");
+        return @"prepare test";
+    }];
+    
     [self addEvent:@"GroupEvent" group:kTestGroupEvent withAction:^id(NSDictionary *param) {
+        NSLog(@"--------GroupEvent--------");
         NSString *title = param[@"title"];
         if (!title) {
             title = @"GroupEvent";
@@ -169,25 +184,25 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_self.groupEventBtn setTitle:@"group1" forState:UIControlStateNormal];
         });
-        return nil;
+        return @"GroupEvent1";
     }];
     [self addEvent:@"GroupEvent2" group:kTestGroupEvent withAction:^id(NSDictionary *param) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_self.groupEventBtn setTitle:@"group2" forState:UIControlStateNormal];
         });
-        return nil;
+        return @"GroupEvent2";
     }];
-    [self addEvent:@"GroupEvent3" group:kTestGroupEvent withAction:^id(NSDictionary *param) {
+    [self addEventPerformOnce:@"GroupEvent3" group:kTestGroupEvent withAction:^id(NSDictionary *param) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_self.groupEventBtn setTitle:@"group3" forState:UIControlStateNormal];
         });
-        return nil;
+        return @"GroupEvent3";
     }];
     [self addEvent:@"GroupEvent4" group:kTestGroupEvent withAction:^id(NSDictionary *param) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_self.groupEventBtn setTitle:@"group4" forState:UIControlStateNormal];
         });
-        return nil;
+        return @"GroupEvent4";
     }];
 }
 
