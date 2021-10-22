@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NOD-4p-SEL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NOD-4p-SEL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -93,13 +93,29 @@
                                     <action selector="routeBlock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hya-gH-cca"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-fE-7SQ">
+                                <rect key="frame" x="166.5" y="688" width="81" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="RaB-N8-k8N"/>
+                                    <constraint firstAttribute="height" constant="30" id="wQH-5m-r91"/>
+                                </constraints>
+                                <state key="normal" title="GroupEvent">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="groupEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAO-Pc-7Kp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pfd-HD-gHa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2WW-mi-Oj0"/>
                             <constraint firstItem="1z5-6A-v8G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Fo-0B-rUe"/>
+                            <constraint firstItem="9U0-fE-7SQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88P-gS-taS"/>
                             <constraint firstItem="85g-eL-qug" firstAttribute="top" secondItem="iCz-eT-xG7" secondAttribute="bottom" constant="50" id="8aa-Yq-LKG"/>
+                            <constraint firstItem="9U0-fE-7SQ" firstAttribute="top" secondItem="85g-eL-qug" secondAttribute="bottom" constant="150" id="ADN-2U-eQG"/>
                             <constraint firstItem="pfd-HD-gHa" firstAttribute="top" secondItem="1z5-6A-v8G" secondAttribute="bottom" constant="50" id="IDG-c1-4wh"/>
                             <constraint firstItem="85g-eL-qug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3r-q9-VTz"/>
                             <constraint firstItem="iCz-eT-xG7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QCU-Gj-kCz"/>
@@ -110,6 +126,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUg-Zi-Re8"/>
+                    <connections>
+                        <outlet property="groupEventBtn" destination="9U0-fE-7SQ" id="xy4-IR-04c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,6 +152,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

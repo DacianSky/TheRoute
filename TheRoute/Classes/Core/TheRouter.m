@@ -65,6 +65,7 @@ static TheRouter * _instance = nil;
         _support = [[TheRouteSupport alloc] init];
         _core = [[TheRouteCore alloc] init];
         _core.map = _support.map = [@{} mutableCopy];
+        _support.group = [@{} mutableCopy];
         _core.delegate = self;
     }
     return self;

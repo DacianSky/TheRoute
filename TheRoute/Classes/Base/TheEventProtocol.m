@@ -24,6 +24,16 @@
     return [_theRoute executeEvent:name withParameter:param];
 }
 
++ (id)startGroupEvent:(NSString *)group
+{
+    return [_theRoute executeGroupEvent:group];
+}
+
++ (id)startGroupEvent:(NSString *)group withParam:(NSDictionary *)param
+{
+    return [_theRoute executeGroupEvent:group withParameter:param];
+}
+
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [_theRoute addEvent:name forAction:actionBlock];
@@ -34,14 +44,34 @@
     [_theRoute addEvent:name forOnceAction:actionBlock]; // 模拟未启动
 }
 
++ (void)addEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [_theRoute addEvent:name group:group forAction:actionBlock];
+}
+
++ (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [_theRoute addEvent:name group:group forOnceAction:actionBlock];
+}
+
 + (void)removeEvent:(NSString *)name
 {
     [_theRoute removeEvent:name];
 }
 
++ (void)removeGroupEvent:(NSString *)group
+{
+    [_theRoute removeGroupEvent:group];
+}
+
 + (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
 {
     [_theRoute addParameter:parameter forEvent:name];
+}
+
++ (void)addParameter:(NSDictionary *)parameter forGroup:(NSString *)group
+{
+    [_theRoute addParameter:parameter forGroup:group];
 }
 
 - (id)startEventWithName:(NSString *)name
@@ -54,6 +84,16 @@
     return [[self class] startEventWithName:name withParam:param];
 }
 
+- (id)startGroupEvent:(NSString *)group
+{
+    return [[self class] startGroupEvent:group];
+}
+
+- (id)startGroupEvent:(NSString *)group withParam:(NSDictionary *)param
+{
+    return [[self class] startGroupEvent:group withParam:(NSDictionary *)param];
+}
+
 - (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [[self class] addEvent:name withAction:actionBlock];
@@ -64,14 +104,34 @@
     [[self class] addEventPerformOnce:name withAction:actionBlock]; // 模拟未启动
 }
 
+- (void)addEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [[self class] addEvent:name group:group withAction:actionBlock];
+}
+
+- (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [[self class] addEventPerformOnce:name group:group withAction:actionBlock];
+}
+
 - (void)removeEvent:(NSString *)name
 {
     [[self class] removeEvent:name];
 }
 
+- (void)removeGroupEvent:(NSString *)group
+{
+    [[self class] removeGroupEvent:group];
+}
+
 - (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
 {
     [[self class] addParameter:parameter forEvent:name];
+}
+
+- (void)addParameter:(NSDictionary *)parameter forGroup:(NSString *)group
+{
+    [[self class] addParameter:parameter forGroup:group];
 }
 
 #pragma mark - event
@@ -116,6 +176,16 @@
     return [theContainer startEventWithName:name withParam:param];
 }
 
++ (id)startGroupEvent:(NSString *)group
+{
+    return [theContainer startGroupEvent:group];
+}
+
++ (id)startGroupEvent:(NSString *)group withParam:(NSDictionary *)param
+{
+    return [theContainer startGroupEvent:group withParam:param];
+}
+
 + (void)addEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [theContainer addEvent:name withAction:actionBlock];
@@ -126,14 +196,34 @@
     [theContainer addEventPerformOnce:name withAction:actionBlock];
 }
 
++ (void)addEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [theContainer addEvent:name group:group withAction:actionBlock];
+}
+
++ (void)addEventPerformOnce:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [theContainer addEventPerformOnce:name group:group withAction:actionBlock];
+}
+
 + (void)removeEvent:(NSString *)name
 {
     [theContainer removeEvent:name];
 }
 
++ (void)removeGroupEvent:(NSString *)group
+{
+    [theContainer removeGroupEvent:group];
+}
+
 + (void)addParameter:(NSDictionary *)parameter forEvent:(NSString *)name
 {
     [theContainer addParameter:parameter forEvent:name];
+}
+
++ (void)addParameter:(NSDictionary *)parameter forGroup:(NSString *)group
+{
+    [theContainer addParameter:parameter forGroup:group];
 }
 
 @end

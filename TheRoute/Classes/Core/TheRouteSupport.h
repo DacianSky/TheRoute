@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TheRouteSupport : NSObject <TheSupportProtocol>
 
 @property (nonatomic, strong) NSMutableDictionary *map;
+@property (nonatomic, strong) NSMutableDictionary *group;
 
 @end
 
