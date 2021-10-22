@@ -182,9 +182,19 @@
     [self addEvent:kBindEventName withAction:actionBlock];
 }
 
+- (void)bindEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [self addEvent:kBindEventName group:group withAction:actionBlock];
+}
+
 - (void)bindEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock
 {
     [self addEventPerformOnce:kBindEventName withAction:actionBlock];
+}
+
+- (void)bindEventPerformOnce:(NSString *)name group:(NSString *)group withAction:(id(^)(NSDictionary *param))actionBlock
+{
+    [self addEventPerformOnce:kBindEventName group:group withAction:actionBlock];
 }
 
 - (id)fireEventWithName:(NSString *)name
@@ -192,14 +202,34 @@
     return [self startEventWithName:kBindEventName];
 }
 
+- (id)fireGroupEvent:(NSString *)name
+{
+    return [self startGroupEvent:kBindEventName];
+}
+
 - (id)fireEvent:(NSString *)name withParam:(NSDictionary *)param
 {
     return [self startEventWithName:kBindEventName withParam:param];
 }
 
+- (id)fireGroupEvent:(NSString *)name withParam:(NSDictionary *)param
+{
+    return [self startGroupEvent:kBindEventName withParam:param];
+}
+
+- (id)fireGroupEvent:(NSString *)name identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param
+{
+    return [self startGroupEvent:kBindEventName identifier:aspectIdentifier type:actionType withParam:param];
+}
+
 - (void)unbindEvent:(NSString *)name
 {
     [self removeEvent:kBindEventName];
+}
+
+- (void)unbindGroupEvent:(NSString *)name
+{
+    [self removeGroupEvent:kBindEventName];
 }
 
 @end

@@ -59,9 +59,15 @@
 - (void)addParameter:(NSDictionary *)parameter forGroup:(NSString *)name;
 
 - (void)bindEvent:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
+- (void)bindEvent:(NSString *)name group:group withAction:(id(^)(NSDictionary *param))actionBlock;
 - (void)bindEventPerformOnce:(NSString *)name withAction:(id(^)(NSDictionary *param))actionBlock;
+- (void)bindEventPerformOnce:(NSString *)name group:(NSString *)group withAction:(id(^)(NSDictionary *param))actionBlock;
 - (id)fireEventWithName:(NSString *)name;
+- (id)fireGroupEvent:(NSString *)group;
 - (id)fireEvent:(NSString *)name withParam:(NSDictionary *)param;
+- (id)fireGroupEvent:(NSString *)group withParam:(NSDictionary *)param;
+- (id)fireGroupEvent:(NSString *)group identifier:(NSString *)aspectIdentifier type:(NSString *)actionType withParam:(NSDictionary *)param;
 - (void)unbindEvent:(NSString *)name;
+- (void)unbindGroupEvent:(NSString *)group;
 
 @end

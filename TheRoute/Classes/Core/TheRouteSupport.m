@@ -100,11 +100,6 @@ static NSString *eventGroupPreparePrefix = @"_event_group_type_";
     actionType = actionType.length ? actionType : @"prepare";
     identifier = identifier.length ? identifier : @"default";
     NSString *identifierName = [NSString stringWithFormat:@"%@%@_%@",eventGroupPreparePrefix,actionType,identifier];
-//    NSMutableArray *identifierList = self.map[identifierName];
-//    if (![identifierList isKindOfClass:NSMutableArray.class]) {
-//        identifierList = [@[] mutableCopy];
-//    }
-//    [identifierList addObject:actionBlock];
     self.map[identifierName] = actionBlock;
 }
 
